@@ -1,0 +1,222 @@
+01101;Cultivo de arroz
+01102;Cultivo de milho
+01103;Cultivo de outros cereais para grãos
+01104;Cultivo de algodão herbáceo
+01105;Cultivo de cana-de-açúcar
+01106;Cultivo de fumo
+01107;Cultivo de soja
+01108;Cultivo de mandioca
+01109;Cultivo de outros produtos de lavoura temporária
+01110;Cultivo de hortaliças, legumes e outros produtos da horticultura 
+01111;Cultivo de flores, plantas ornamentais e produtos de viveiro
+01112;Cultivo de frutas cítricas
+01113;Cultivo de café
+01114;Cultivo de cacau
+01115;Cultivo de uva
+01116;Cultivo de banana
+01117;Cultivo de outros produtos de lavoura permanente
+01118;Cultivos agrícolas mal especificados
+01201;Criação de bovinos
+01202;Criação de outros animais de grande porte
+01203;Criação de ovinos
+01204;Criação de suinos
+01205;Criação de aves
+01206;Apicultura
+01207;Sericicultura
+01208;Criação de outros animais
+01209;Criação de animais mal especificados
+01300;Produção mista: lavoura e pecuária
+01401;Atividades de serviços relacionados com a agricultura
+01402;Atividades de serviços relacionados com a pecuária - exceto atividades veterinárias
+01500;Caça, repovoamento ciegético e serviços relacionados
+02001;Silvicultura e exploração florestal 
+02002;Atividades de serviços relacionados com a silvicultura e a exploração florestal
+05001;Pesca e serviços relacionados
+05002;Aquicultura e serviços relacionados
+10000;Extração de carvão mineral
+11000;Extração de petróleo e gás natural e serviços relacionados
+12000;Extração de minerais radioativos
+13001;Extração de minérios de metais preciosos
+13002;Extração de minerais metálicos - exceto metais preciosos e radioativos
+14001;Extração de pedras e outros materiais para construção
+14002;Extração de pedras preciosas e semi-preciosas
+14003;Extração de outros minerais não-metálicos
+14004;Extração de minerais mal especificados
+15010;Abate e preparação de carne e pescado
+15021;Produção de conservas de frutas, legumes e outros vegetais
+15022;Produção de gorduras e óleos vegetais
+15030;Fabricação de produtos do laticínio
+15041;Fabricação e refino do açúcar
+15042;Torrefação e moagem de café
+15043;Fabricação de outros  produtos alimentícios 
+15050;Fabricação de bebidas
+16000;Fabricação de produtos do fumo
+17001;Beneficiamento de fibras, fiação e tecelagem
+17002;Fabricação de artefatos têxteis a partir de tecidos - exceto vestuário
+18001;Confecção de artigos do vestuário e acessórios - exceto sob medida
+18002;Confecção sob medida de artigos do vestuário e acessórios
+18999;Confecção de artigos do vestuário e acessórios sob medida ou não
+19011;Curtimento e outras preparações de couro
+19012;Fabricação de artefatos de couro
+19020;Fabricação de calçados
+20000;Fabricação de produtos de madeira
+21001;Fabricação de celulose,   papel e papelão liso, cartolina e cartão
+21002;Fabricação de papelão corrugado e de embalagens e artefatos de papel e papelão
+22000;Edição, impressão e reprodução de gravações
+23010;Coquerias
+23020;Fabricação de produtos do refino do petróleo
+23030;Elaboração de combustíveis nucleares
+23400;Produção de álcool
+24010;Fabricação de tintas, vernizes, esmaltes e lacas
+24020;Fabricação de produtos farmacêuticos
+24030;Fabricação de sabões, detergentes, produtos de limpeza e perfumaria
+24090;Fabricação de produtos químicos diversos
+25010;Fabricação de produtos de borracha
+25020;Fabricação de produtos de plástico
+26010;Fabricação de vidro e produtos de vidro
+26091;Fabricação de produtos cerâmicos
+26092;Fabricação de produtos diversos de minerais não-metálicos
+27001;Fabricação de produtos siderúrgicos
+27002;Metalurgia dos metais não-ferrosos
+27003;Fundição
+28001;Fabricação de produtos de metal - exceto máquinas e equipamentos
+28002;Forjaria, estamparia, metalurgia do pó e serviços de tratamento de metais
+29001;Fabricação de máquinas e equipamentos - exceto eletrodomésticos
+29002;Fabricação de eletrodomésticos
+30000;Fabricação de máquinas de escritório e equipamentos de informática
+31001;Fabricação de máquinas, aparelhos e materiais elétricos diversos - exceto para veículos
+31002;Fabricação de material elétrico para veículos
+32000;Fabricação de material eletrônico e de aparelhos e equipamentos de comunicação
+33001;Fabricação de aparelhos e equipamentos médico-hospitalares
+33002;Fabricação de aparelhos e instrumentos de medida, teste e controle - exceto para controle de processos industriais
+33003;Fabricação de máquinas, aparelhos e equipamentos de sistemas eletrônicos dedicados a automação industrial e controle do processo produtivo
+33004;Fabricação de aparelhos, instrumentos e materiais ópticos, fotográficos e cinematográficos
+33005;Fabricação de cronômetros e relógios
+34001;Fabricação e montagem de veículos automotores
+34002;Fabricação de cabines, carrocerias, reboques  e peças para veículos automotores
+34003;Recondicionamento ou recuperação de motores de veículos automotores
+35010;Construção e reparação de embarcações
+35020;Construção e montagem de locomotivas, vagões e outros materiais rodantes
+35030;Construção, montagem e reparação de aeronaves
+35090;Fabricação de equipamentos de transporte diversos
+36010;Fabricação de artigos do mobiliário
+36090;Fabricação de produtos diversos 
+37000;Reciclagem
+40010;Produção e distribuição de energia elétrica
+40020;Produção e distribuição de gás através de tubulações
+41000;Captação, tratamento e distribuição de água
+45001;Preparação do terreno 
+45002;Construção de edifícios e obras de engenharia civil
+45003;Obras de instalações
+45004;Obras de acabamento 
+45005;Aluguel de equipamentos de construção e demolição com operários
+45999;Atividades de construção - especialidade não definida
+50010;Comércio de veículos automotores
+50020;Serviços de reparação e manutenção de veículos automotores
+50030;Comércio de peças e acessórios para veículos automotores
+50040;Comércio, manutenção e reparação de motocicletas
+50050;Posto de combustíveis
+53010;Representantes comerciais e agentes do comércio
+53020;Comércio de produtos agropecuários
+53030;Comércio de produtos alimentícios, bebidas e fumo
+53041;Comércio de fios têxteis, tecidos, artefatos de tecidos e armarinho
+53042;Comércio de artigos do vestuário, complementos e calçados
+53050;Comércio de madeira, material de construção, ferragens e ferramentas
+53061;Comércio de eletrodomésticos, móveis e outros artigos de residência
+53062;Comércio de livros, jornais, revistas e papelaria
+53063;Comércio de produtos farmacêuticos, médicos, ortopédicos, odontológicos, cosméticos e de perfumaria
+53064;Comércio de máquinas, aparelhos e equipamentos - exceto eletrodomésticos
+53065;Comércio de combustíveis - exceto posto de combustíveis 
+53066;Comércio de resíduos e sucatas
+53067;Comércio de produtos extrativos de origem mineral
+53068;Comércio de mercadorias em geral - inclusive mercadorias usadas
+53070;Supermercado e Hipermercado
+53080;Lojas de departamento e outros comércios não especializados, sem predominância de produtos alimentícios
+53090;Comércio varejista de artigos em geral por catálogo, televisão, internet e outros meios de comunicação
+53101;Comércio varejista realizado em postos móveis, instalados em vias públicas ou em mercados
+53102;Outros tipos de comércio varejista, não realizado em lojas 
+53111;Reparação e manutenção de eletrodomésticos
+53112;Reparação de calçados 
+53113;Reparação de objetos pessoais e domésticos - exceto de eletrodomésticos e calçados
+53999;Atividades de comércio não especificadas
+55010;Alojamento
+55020;Ambulantes de alimentação
+55030;Outros serviços de alimentação - exceto ambulantes
+55999;Atividades de alojamento e/ou alimentação não especificadas
+60010;Transporte ferroviário
+60020;Transporte metroviário
+60031;Transporte rodoviário de cargas - exceto de mudanças 
+60032;Transporte rodoviário de mudanças
+60040;Transporte rodoviário de passageiros
+60091;Transporte em bondes, funiculares, teleféricos ou trens próprios para exploração de pontos turísticos
+60092;Transporte dutoviário
+60999;Transporte terrestre - modalidade não especificada
+61000;Transporte aquaviário
+62000;Transporte aéreo
+63010;Carga e descarga, armazenamento e depósitos
+63021;Atividades auxiliares aos transportes
+63022;Organização do transporte de cargas
+63030;Agências de viagens e organizadores de viagens
+64010;Atividades de correio
+64020;Telecomunicações
+65000;Intermediação Financeira
+66000;Seguros e previdência privada
+67010;Atividades auxiliares da intermediação financeira
+67020;Atividades auxiliares dos seguros e da previdência privada
+70001;Atividades imobiliárias - exceto condomínios prediais
+70002;Condomínios prediais
+71010;Aluguel de veículos
+71020;Aluguel de máquinas e equipamentos
+71030;Aluguel de objetos pessoais e domésticos
+72010;Atividades de informática
+72020;Manutenção e reparação de máquinas de escritório e de informática
+73000;Pesquisa e desenvolvimento
+74011;"Atividades jurídicas; de contabilidade; e de pesquisas de mercado e opinião pública"
+74012;Atividades de assessoria em gestão empresarial
+74021;Serviços de arquitetura e engenharia e de assessoramento técnico especializado
+74022;"Ensaios de materiais e de produtos; análise de qualidade"
+74030;Publicidade
+74040;Seleção, agenciamento e locação de mão-de-obra 
+74050;Investigação, vigilância e segurança
+74060;Atividades de imunização, higienização e de limpeza em prédios e em domicílios
+74090;Outros serviços prestados às empresas
+75011;Administração do Estado e da política econômica e social - Federal
+75012;Administração do Estado e da política econômica e social - Estadual
+75013;Administração do Estado e da política econômica e social - Municipal
+75014;Forças Armadas
+75015;Outros serviços coletivos prestados pela administração pública - Federal
+75016;Outros serviços coletivos prestados pela administração pública - Estadual
+75017;Outros serviços coletivos prestados pela administração pública - Municipal
+75020;Seguridade social
+75999;Administração pública, esfera de governo não especificada
+80011;Educação regular, supletiva e especial pública
+80012;Educação regular, supletiva e especial particular
+80090;Outras atividades de ensino
+80999;Atividades de ensino não especificadas
+85011;Saúde pública
+85012;Saúde  particular
+85013;Outras atividades de saúde
+85020;Serviços veterinários
+85030;Serviços sociais
+85999;Atividades de saúde não especificadas
+90000;"Limpeza urbana e esgoto; e atividades conexas"
+91010;Atividades de organizações sindicais
+91020;Atividades de organizações empresariais, patronais e profissionais
+91091;Atividades de organizações religiosas e filosóficas
+91092;Outras atividades associativas
+92011;Produção de filmes cinematográficos e fitas de vídeo
+92012;Distribuição e projeção de filmes e de vídeos
+92013;Atividades de rádio
+92014;Atividades de televisão
+92015;Outras atividades artísticas e de espetáculos
+92020;Atividades de agências de notícias
+92030;Bibliotecas, arquivos, museus e outras atividades culturais
+92040;Atividades desportivas e outras relacionadas ao lazer
+93010;Lavanderias e tinturarias
+93020;Cabeleireiros e outros tratamentos de beleza
+93030;Atividades funerárias 
+93091;Atividades de manutenção do físico corporal
+93092;Outras atividades de serviços pessoais
+95000;Serviços domésticos 
+99000;Organismos internacionais e outras instituições extraterritoriais
+00000;Atividades mal especificadas

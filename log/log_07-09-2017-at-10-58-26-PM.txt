@@ -1,0 +1,10 @@
+10:58:26= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+10:58:26= + 0s   = Inserindo data/uf.csv
+10:58:26= + 0s   = uf.csv
+10:58:26= + 0s   = Inseridos: 28
+10:58:26= + 0s   = Inserindo data/municipios_codigos_go.csv
+10:58:26= + 0s   = municipios_codigos_go.csv
+10:58:26= + 0s   = Inseridos: 248
+10:58:26= + 0s   = Inserindo data/atividades_bases.csv
+10:58:26= + 0s   = atividades_bases.csv
+10:58:26= + 0s   = org.postgresql.util.PSQLException: ERROR: value too long for type character varying(80)

@@ -1,0 +1,3 @@
+10:05:19= + 0s   = Inserindo unidades_federativas
+10:05:19= + 0s   = unidades_federativas.csv
+10:05:19= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge

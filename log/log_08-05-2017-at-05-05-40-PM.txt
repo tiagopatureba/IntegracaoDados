@@ -1,0 +1,3 @@
+05:05:40= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+05:05:40= + 0s   = Inserindo REGIAO 
+05:05:41= + 1s   = Inseridos: 1

@@ -1,0 +1,5 @@
+10:21:20= + 0s   = Inserindo unidades_federativas
+10:21:20= + 0s   = municipios_codigos_go.csv
+10:21:20= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+10:21:20= + 0s   = org.postgresql.util.PSQLException: ERROR: column "regiao" of relation "unidades_federativas" does not exist
+  Posição: 41

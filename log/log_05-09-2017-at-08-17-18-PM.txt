@@ -1,0 +1,3 @@
+08:17:18= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+08:17:18= + 0s   = org.postgresql.util.PSQLException: ERROR: syntax error at or near "*"
+  Posição: 8

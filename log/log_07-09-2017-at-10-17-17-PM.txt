@@ -1,0 +1,6 @@
+10:17:17= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+10:17:17= + 0s   = Inserindo data/unidades_federativas.csv
+10:17:17= + 0s   = unidades_federativas.csv
+10:17:37= + 20s  = org.postgresql.util.PSQLException: ERROR: column "codigo" is of type integer but expression is of type character varying
+  Dica: You will need to rewrite or cast the expression.
+  Posição: 63

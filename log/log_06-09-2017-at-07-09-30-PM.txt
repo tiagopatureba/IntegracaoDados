@@ -1,0 +1,4 @@
+07:09:30= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+07:09:31= + 1s   = Inserindo municipios_codigos
+07:09:31= + 0s   = municipios_codigos_go.csv
+07:09:31= + 0s   = Inseridos: 248

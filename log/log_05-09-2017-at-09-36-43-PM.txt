@@ -1,0 +1,3 @@
+09:36:43= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+09:36:43= + 0s   = org.postgresql.util.PSQLException: ERROR: relation "public.regiao" does not exist
+  Posição: 13

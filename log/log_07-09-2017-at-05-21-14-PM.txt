@@ -1,0 +1,6 @@
+05:21:14= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:dados
+05:21:14= + 0s   = Inserindo municipios_codigos
+05:21:14= + 0s   = municipios_codigos_go.csv
+05:21:14= + 0s   = Inseridos: 248
+05:21:14= + 0s   = Inserindo unidades_federativas
+05:21:14= + 0s   = unidades_federativas.csv
