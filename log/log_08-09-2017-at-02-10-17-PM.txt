@@ -1,0 +1,13 @@
+02:10:17= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+02:10:17= + 0s   = Inserindo data/unidades_federativas.csv
+02:10:17= + 0s   = unidades_federativas.csv
+02:10:17= + 0s   = Inseridos: 28
+02:10:17= + 0s   = Inserindo data/municipios.csv
+02:10:17= + 0s   = municipios.csv
+02:10:18= + 1s   = Inseridos: 5566
+02:10:18= + 0s   = Inserindo data/atividades_bases.csv
+02:10:18= + 0s   = atividades_bases.csv
+02:10:18= + 0s   = Inseridos: 223
+02:10:18= + 0s   = Inserindo data/regioes_geograficas.csv
+02:10:18= + 0s   = regioes_geograficas.csv
+02:10:18= + 0s   = java.io.FileNotFoundException: data\regioes_geograficas.csv (O sistema não pode encontrar o arquivo especificado)

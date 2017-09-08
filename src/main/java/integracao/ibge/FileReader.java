@@ -47,14 +47,17 @@ public class FileReader {
             switch (sqlName) {
                 case "insertUnidadesFederativas":
                 case "insertAtividadesBases":
+                case "insertMunicipios":
+                case "insertRegioesGeograficas":
                     preparedStatement.setInt(1, Integer.valueOf(atributos[0]));
                     preparedStatement.setString(2, atributos[1]);
                     break;
-                case "insertMunicipio":
-                    preparedStatement.setInt(1, Integer.valueOf(atributos[0]));
-                    preparedStatement.setInt(2, Integer.valueOf(atributos[1]));
-                    preparedStatement.setString(3, atributos[2]);
-                    break;
+
+                //case "insertMunicipio":
+                //    preparedStatement.setInt(1, Integer.valueOf(atributos[0]));
+                //    preparedStatement.setInt(2, Integer.valueOf(atributos[1]));
+                //    preparedStatement.setString(3, atributos[2]);
+                //    break;
             }
 
         } catch (SQLException ex) {

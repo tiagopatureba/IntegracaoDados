@@ -1,0 +1,7 @@
+01:41:55= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+01:41:55= + 0s   = Inserindo data/unidades_federativas.csv
+01:41:55= + 0s   = unidades_federativas.csv
+01:41:55= + 0s   = Inseridos: 28
+01:41:55= + 0s   = Inserindo data/municipios.csv
+01:41:55= + 0s   = municipios.csv
+01:41:56= + 1s   = org.postgresql.util.PSQLException: Nenhum valor especificado para parâmetro 1.
