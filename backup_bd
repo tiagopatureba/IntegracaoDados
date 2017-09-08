@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.2
 -- Dumped by pg_dump version 9.6.2
 
--- Started on 2017-09-08 13:12:29
+-- Started on 2017-09-08 16:08:06
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -25,7 +25,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2138 (class 0 OID 0)
+-- TOC entry 2147 (class 0 OID 0)
 -- Dependencies: 1
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
@@ -40,7 +40,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 187 (class 1259 OID 16593)
+-- TOC entry 186 (class 1259 OID 16593)
 -- Name: atividades_bases; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -53,21 +53,33 @@ CREATE TABLE atividades_bases (
 ALTER TABLE atividades_bases OWNER TO postgres;
 
 --
--- TOC entry 185 (class 1259 OID 16547)
--- Name: municipios_codigos; Type: TABLE; Schema: public; Owner: postgres
+-- TOC entry 187 (class 1259 OID 16606)
+-- Name: municipios; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE municipios_codigos (
-    regiao bigint NOT NULL,
-    regiao_pai bigint,
-    descricao character varying(80)
+CREATE TABLE municipios (
+    codigo bigint NOT NULL,
+    descricao character varying(1023) NOT NULL
 );
 
 
-ALTER TABLE municipios_codigos OWNER TO postgres;
+ALTER TABLE municipios OWNER TO postgres;
 
 --
--- TOC entry 186 (class 1259 OID 16578)
+-- TOC entry 188 (class 1259 OID 16626)
+-- Name: regioes_geograficas; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE regioes_geograficas (
+    codigo bigint NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE regioes_geograficas OWNER TO postgres;
+
+--
+-- TOC entry 185 (class 1259 OID 16578)
 -- Name: unidades_federativas; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -80,527 +92,39 @@ CREATE TABLE unidades_federativas (
 ALTER TABLE unidades_federativas OWNER TO postgres;
 
 --
--- TOC entry 2131 (class 0 OID 16593)
--- Dependencies: 187
+-- TOC entry 2138 (class 0 OID 16593)
+-- Dependencies: 186
 -- Data for Name: atividades_bases; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO atividades_bases VALUES (1101, 'Cultivo de arroz');
-INSERT INTO atividades_bases VALUES (1102, 'Cultivo de milho');
-INSERT INTO atividades_bases VALUES (1103, 'Cultivo de outros cereais para grãos');
-INSERT INTO atividades_bases VALUES (1104, 'Cultivo de algodão herbáceo');
-INSERT INTO atividades_bases VALUES (1105, 'Cultivo de cana-de-açúcar');
-INSERT INTO atividades_bases VALUES (1106, 'Cultivo de fumo');
-INSERT INTO atividades_bases VALUES (1107, 'Cultivo de soja');
-INSERT INTO atividades_bases VALUES (1108, 'Cultivo de mandioca');
-INSERT INTO atividades_bases VALUES (1109, 'Cultivo de outros produtos de lavoura temporária');
-INSERT INTO atividades_bases VALUES (1110, 'Cultivo de hortaliças, legumes e outros produtos da horticultura ');
-INSERT INTO atividades_bases VALUES (1111, 'Cultivo de flores, plantas ornamentais e produtos de viveiro');
-INSERT INTO atividades_bases VALUES (1112, 'Cultivo de frutas cítricas');
-INSERT INTO atividades_bases VALUES (1113, 'Cultivo de café');
-INSERT INTO atividades_bases VALUES (1114, 'Cultivo de cacau');
-INSERT INTO atividades_bases VALUES (1115, 'Cultivo de uva');
-INSERT INTO atividades_bases VALUES (1116, 'Cultivo de banana');
-INSERT INTO atividades_bases VALUES (1117, 'Cultivo de outros produtos de lavoura permanente');
-INSERT INTO atividades_bases VALUES (1118, 'Cultivos agrícolas mal especificados');
-INSERT INTO atividades_bases VALUES (1201, 'Criação de bovinos');
-INSERT INTO atividades_bases VALUES (1202, 'Criação de outros animais de grande porte');
-INSERT INTO atividades_bases VALUES (1203, 'Criação de ovinos');
-INSERT INTO atividades_bases VALUES (1204, 'Criação de suinos');
-INSERT INTO atividades_bases VALUES (1205, 'Criação de aves');
-INSERT INTO atividades_bases VALUES (1206, 'Apicultura');
-INSERT INTO atividades_bases VALUES (1207, 'Sericicultura');
-INSERT INTO atividades_bases VALUES (1208, 'Criação de outros animais');
-INSERT INTO atividades_bases VALUES (1209, 'Criação de animais mal especificados');
-INSERT INTO atividades_bases VALUES (1300, 'Produção mista: lavoura e pecuária');
-INSERT INTO atividades_bases VALUES (1401, 'Atividades de serviços relacionados com a agricultura');
-INSERT INTO atividades_bases VALUES (1402, 'Atividades de serviços relacionados com a pecuária - exceto atividades veterinárias');
-INSERT INTO atividades_bases VALUES (1500, 'Caça, repovoamento ciegético e serviços relacionados');
-INSERT INTO atividades_bases VALUES (2001, 'Silvicultura e exploração florestal ');
-INSERT INTO atividades_bases VALUES (2002, 'Atividades de serviços relacionados com a silvicultura e a exploração florestal');
-INSERT INTO atividades_bases VALUES (5001, 'Pesca e serviços relacionados');
-INSERT INTO atividades_bases VALUES (5002, 'Aquicultura e serviços relacionados');
-INSERT INTO atividades_bases VALUES (10000, 'Extração de carvão mineral');
-INSERT INTO atividades_bases VALUES (11000, 'Extração de petróleo e gás natural e serviços relacionados');
-INSERT INTO atividades_bases VALUES (12000, 'Extração de minerais radioativos');
-INSERT INTO atividades_bases VALUES (13001, 'Extração de minérios de metais preciosos');
-INSERT INTO atividades_bases VALUES (13002, 'Extração de minerais metálicos - exceto metais preciosos e radioativos');
-INSERT INTO atividades_bases VALUES (14001, 'Extração de pedras e outros materiais para construção');
-INSERT INTO atividades_bases VALUES (14002, 'Extração de pedras preciosas e semi-preciosas');
-INSERT INTO atividades_bases VALUES (14003, 'Extração de outros minerais não-metálicos');
-INSERT INTO atividades_bases VALUES (14004, 'Extração de minerais mal especificados');
-INSERT INTO atividades_bases VALUES (15010, 'Abate e preparação de carne e pescado');
-INSERT INTO atividades_bases VALUES (15021, 'Produção de conservas de frutas, legumes e outros vegetais');
-INSERT INTO atividades_bases VALUES (15022, 'Produção de gorduras e óleos vegetais');
-INSERT INTO atividades_bases VALUES (15030, 'Fabricação de produtos do laticínio');
-INSERT INTO atividades_bases VALUES (15041, 'Fabricação e refino do açúcar');
-INSERT INTO atividades_bases VALUES (15042, 'Torrefação e moagem de café');
-INSERT INTO atividades_bases VALUES (15043, 'Fabricação de outros  produtos alimentícios ');
-INSERT INTO atividades_bases VALUES (15050, 'Fabricação de bebidas');
-INSERT INTO atividades_bases VALUES (16000, 'Fabricação de produtos do fumo');
-INSERT INTO atividades_bases VALUES (17001, 'Beneficiamento de fibras, fiação e tecelagem');
-INSERT INTO atividades_bases VALUES (17002, 'Fabricação de artefatos têxteis a partir de tecidos - exceto vestuário');
-INSERT INTO atividades_bases VALUES (18001, 'Confecção de artigos do vestuário e acessórios - exceto sob medida');
-INSERT INTO atividades_bases VALUES (18002, 'Confecção sob medida de artigos do vestuário e acessórios');
-INSERT INTO atividades_bases VALUES (18999, 'Confecção de artigos do vestuário e acessórios sob medida ou não');
-INSERT INTO atividades_bases VALUES (19011, 'Curtimento e outras preparações de couro');
-INSERT INTO atividades_bases VALUES (19012, 'Fabricação de artefatos de couro');
-INSERT INTO atividades_bases VALUES (19020, 'Fabricação de calçados');
-INSERT INTO atividades_bases VALUES (20000, 'Fabricação de produtos de madeira');
-INSERT INTO atividades_bases VALUES (21001, 'Fabricação de celulose,   papel e papelão liso, cartolina e cartão');
-INSERT INTO atividades_bases VALUES (21002, 'Fabricação de papelão corrugado e de embalagens e artefatos de papel e papelão');
-INSERT INTO atividades_bases VALUES (22000, 'Edição, impressão e reprodução de gravações');
-INSERT INTO atividades_bases VALUES (23010, 'Coquerias');
-INSERT INTO atividades_bases VALUES (23020, 'Fabricação de produtos do refino do petróleo');
-INSERT INTO atividades_bases VALUES (23030, 'Elaboração de combustíveis nucleares');
-INSERT INTO atividades_bases VALUES (23400, 'Produção de álcool');
-INSERT INTO atividades_bases VALUES (24010, 'Fabricação de tintas, vernizes, esmaltes e lacas');
-INSERT INTO atividades_bases VALUES (24020, 'Fabricação de produtos farmacêuticos');
-INSERT INTO atividades_bases VALUES (24030, 'Fabricação de sabões, detergentes, produtos de limpeza e perfumaria');
-INSERT INTO atividades_bases VALUES (24090, 'Fabricação de produtos químicos diversos');
-INSERT INTO atividades_bases VALUES (25010, 'Fabricação de produtos de borracha');
-INSERT INTO atividades_bases VALUES (25020, 'Fabricação de produtos de plástico');
-INSERT INTO atividades_bases VALUES (26010, 'Fabricação de vidro e produtos de vidro');
-INSERT INTO atividades_bases VALUES (26091, 'Fabricação de produtos cerâmicos');
-INSERT INTO atividades_bases VALUES (26092, 'Fabricação de produtos diversos de minerais não-metálicos');
-INSERT INTO atividades_bases VALUES (27001, 'Fabricação de produtos siderúrgicos');
-INSERT INTO atividades_bases VALUES (27002, 'Metalurgia dos metais não-ferrosos');
-INSERT INTO atividades_bases VALUES (27003, 'Fundição');
-INSERT INTO atividades_bases VALUES (28001, 'Fabricação de produtos de metal - exceto máquinas e equipamentos');
-INSERT INTO atividades_bases VALUES (28002, 'Forjaria, estamparia, metalurgia do pó e serviços de tratamento de metais');
-INSERT INTO atividades_bases VALUES (29001, 'Fabricação de máquinas e equipamentos - exceto eletrodomésticos');
-INSERT INTO atividades_bases VALUES (29002, 'Fabricação de eletrodomésticos');
-INSERT INTO atividades_bases VALUES (30000, 'Fabricação de máquinas de escritório e equipamentos de informática');
-INSERT INTO atividades_bases VALUES (31001, 'Fabricação de máquinas, aparelhos e materiais elétricos diversos - exceto para veículos');
-INSERT INTO atividades_bases VALUES (31002, 'Fabricação de material elétrico para veículos');
-INSERT INTO atividades_bases VALUES (32000, 'Fabricação de material eletrônico e de aparelhos e equipamentos de comunicação');
-INSERT INTO atividades_bases VALUES (33001, 'Fabricação de aparelhos e equipamentos médico-hospitalares');
-INSERT INTO atividades_bases VALUES (33002, 'Fabricação de aparelhos e instrumentos de medida, teste e controle - exceto para controle de processos industriais');
-INSERT INTO atividades_bases VALUES (33003, 'Fabricação de máquinas, aparelhos e equipamentos de sistemas eletrônicos dedicados a automação industrial e controle do processo produtivo');
-INSERT INTO atividades_bases VALUES (33004, 'Fabricação de aparelhos, instrumentos e materiais ópticos, fotográficos e cinematográficos');
-INSERT INTO atividades_bases VALUES (33005, 'Fabricação de cronômetros e relógios');
-INSERT INTO atividades_bases VALUES (34001, 'Fabricação e montagem de veículos automotores');
-INSERT INTO atividades_bases VALUES (34002, 'Fabricação de cabines, carrocerias, reboques  e peças para veículos automotores');
-INSERT INTO atividades_bases VALUES (34003, 'Recondicionamento ou recuperação de motores de veículos automotores');
-INSERT INTO atividades_bases VALUES (35010, 'Construção e reparação de embarcações');
-INSERT INTO atividades_bases VALUES (35020, 'Construção e montagem de locomotivas, vagões e outros materiais rodantes');
-INSERT INTO atividades_bases VALUES (35030, 'Construção, montagem e reparação de aeronaves');
-INSERT INTO atividades_bases VALUES (35090, 'Fabricação de equipamentos de transporte diversos');
-INSERT INTO atividades_bases VALUES (36010, 'Fabricação de artigos do mobiliário');
-INSERT INTO atividades_bases VALUES (36090, 'Fabricação de produtos diversos ');
-INSERT INTO atividades_bases VALUES (37000, 'Reciclagem');
-INSERT INTO atividades_bases VALUES (40010, 'Produção e distribuição de energia elétrica');
-INSERT INTO atividades_bases VALUES (40020, 'Produção e distribuição de gás através de tubulações');
-INSERT INTO atividades_bases VALUES (41000, 'Captação, tratamento e distribuição de água');
-INSERT INTO atividades_bases VALUES (45001, 'Preparação do terreno ');
-INSERT INTO atividades_bases VALUES (45002, 'Construção de edifícios e obras de engenharia civil');
-INSERT INTO atividades_bases VALUES (45003, 'Obras de instalações');
-INSERT INTO atividades_bases VALUES (45004, 'Obras de acabamento ');
-INSERT INTO atividades_bases VALUES (45005, 'Aluguel de equipamentos de construção e demolição com operários');
-INSERT INTO atividades_bases VALUES (45999, 'Atividades de construção - especialidade não definida');
-INSERT INTO atividades_bases VALUES (50010, 'Comércio de veículos automotores');
-INSERT INTO atividades_bases VALUES (50020, 'Serviços de reparação e manutenção de veículos automotores');
-INSERT INTO atividades_bases VALUES (50030, 'Comércio de peças e acessórios para veículos automotores');
-INSERT INTO atividades_bases VALUES (50040, 'Comércio, manutenção e reparação de motocicletas');
-INSERT INTO atividades_bases VALUES (50050, 'Posto de combustíveis');
-INSERT INTO atividades_bases VALUES (53010, 'Representantes comerciais e agentes do comércio');
-INSERT INTO atividades_bases VALUES (53020, 'Comércio de produtos agropecuários');
-INSERT INTO atividades_bases VALUES (53030, 'Comércio de produtos alimentícios, bebidas e fumo');
-INSERT INTO atividades_bases VALUES (53041, 'Comércio de fios têxteis, tecidos, artefatos de tecidos e armarinho');
-INSERT INTO atividades_bases VALUES (53042, 'Comércio de artigos do vestuário, complementos e calçados');
-INSERT INTO atividades_bases VALUES (53050, 'Comércio de madeira, material de construção, ferragens e ferramentas');
-INSERT INTO atividades_bases VALUES (53061, 'Comércio de eletrodomésticos, móveis e outros artigos de residência');
-INSERT INTO atividades_bases VALUES (53062, 'Comércio de livros, jornais, revistas e papelaria');
-INSERT INTO atividades_bases VALUES (53063, 'Comércio de produtos farmacêuticos, médicos, ortopédicos, odontológicos, cosméticos e de perfumaria');
-INSERT INTO atividades_bases VALUES (53064, 'Comércio de máquinas, aparelhos e equipamentos - exceto eletrodomésticos');
-INSERT INTO atividades_bases VALUES (53065, 'Comércio de combustíveis - exceto posto de combustíveis ');
-INSERT INTO atividades_bases VALUES (53066, 'Comércio de resíduos e sucatas');
-INSERT INTO atividades_bases VALUES (53067, 'Comércio de produtos extrativos de origem mineral');
-INSERT INTO atividades_bases VALUES (53068, 'Comércio de mercadorias em geral - inclusive mercadorias usadas');
-INSERT INTO atividades_bases VALUES (53070, 'Supermercado e Hipermercado');
-INSERT INTO atividades_bases VALUES (53080, 'Lojas de departamento e outros comércios não especializados, sem predominância de produtos alimentícios');
-INSERT INTO atividades_bases VALUES (53090, 'Comércio varejista de artigos em geral por catálogo, televisão, internet e outros meios de comunicação');
-INSERT INTO atividades_bases VALUES (53101, 'Comércio varejista realizado em postos móveis, instalados em vias públicas ou em mercados');
-INSERT INTO atividades_bases VALUES (53102, 'Outros tipos de comércio varejista, não realizado em lojas ');
-INSERT INTO atividades_bases VALUES (53111, 'Reparação e manutenção de eletrodomésticos');
-INSERT INTO atividades_bases VALUES (53112, 'Reparação de calçados ');
-INSERT INTO atividades_bases VALUES (53113, 'Reparação de objetos pessoais e domésticos - exceto de eletrodomésticos e calçados');
-INSERT INTO atividades_bases VALUES (53999, 'Atividades de comércio não especificadas');
-INSERT INTO atividades_bases VALUES (55010, 'Alojamento');
-INSERT INTO atividades_bases VALUES (55020, 'Ambulantes de alimentação');
-INSERT INTO atividades_bases VALUES (55030, 'Outros serviços de alimentação - exceto ambulantes');
-INSERT INTO atividades_bases VALUES (55999, 'Atividades de alojamento e/ou alimentação não especificadas');
-INSERT INTO atividades_bases VALUES (60010, 'Transporte ferroviário');
-INSERT INTO atividades_bases VALUES (60020, 'Transporte metroviário');
-INSERT INTO atividades_bases VALUES (60031, 'Transporte rodoviário de cargas - exceto de mudanças ');
-INSERT INTO atividades_bases VALUES (60032, 'Transporte rodoviário de mudanças');
-INSERT INTO atividades_bases VALUES (60040, 'Transporte rodoviário de passageiros');
-INSERT INTO atividades_bases VALUES (60091, 'Transporte em bondes, funiculares, teleféricos ou trens próprios para exploração de pontos turísticos');
-INSERT INTO atividades_bases VALUES (60092, 'Transporte dutoviário');
-INSERT INTO atividades_bases VALUES (60999, 'Transporte terrestre - modalidade não especificada');
-INSERT INTO atividades_bases VALUES (61000, 'Transporte aquaviário');
-INSERT INTO atividades_bases VALUES (62000, 'Transporte aéreo');
-INSERT INTO atividades_bases VALUES (63010, 'Carga e descarga, armazenamento e depósitos');
-INSERT INTO atividades_bases VALUES (63021, 'Atividades auxiliares aos transportes');
-INSERT INTO atividades_bases VALUES (63022, 'Organização do transporte de cargas');
-INSERT INTO atividades_bases VALUES (63030, 'Agências de viagens e organizadores de viagens');
-INSERT INTO atividades_bases VALUES (64010, 'Atividades de correio');
-INSERT INTO atividades_bases VALUES (64020, 'Telecomunicações');
-INSERT INTO atividades_bases VALUES (65000, 'Intermediação Financeira');
-INSERT INTO atividades_bases VALUES (66000, 'Seguros e previdência privada');
-INSERT INTO atividades_bases VALUES (67010, 'Atividades auxiliares da intermediação financeira');
-INSERT INTO atividades_bases VALUES (67020, 'Atividades auxiliares dos seguros e da previdência privada');
-INSERT INTO atividades_bases VALUES (70001, 'Atividades imobiliárias - exceto condomínios prediais');
-INSERT INTO atividades_bases VALUES (70002, 'Condomínios prediais');
-INSERT INTO atividades_bases VALUES (71010, 'Aluguel de veículos');
-INSERT INTO atividades_bases VALUES (71020, 'Aluguel de máquinas e equipamentos');
-INSERT INTO atividades_bases VALUES (71030, 'Aluguel de objetos pessoais e domésticos');
-INSERT INTO atividades_bases VALUES (72010, 'Atividades de informática');
-INSERT INTO atividades_bases VALUES (72020, 'Manutenção e reparação de máquinas de escritório e de informática');
-INSERT INTO atividades_bases VALUES (73000, 'Pesquisa e desenvolvimento');
-INSERT INTO atividades_bases VALUES (74011, '"Atividades jurídicas');
-INSERT INTO atividades_bases VALUES (74012, 'Atividades de assessoria em gestão empresarial');
-INSERT INTO atividades_bases VALUES (74021, 'Serviços de arquitetura e engenharia e de assessoramento técnico especializado');
-INSERT INTO atividades_bases VALUES (74022, '"Ensaios de materiais e de produtos');
-INSERT INTO atividades_bases VALUES (74030, 'Publicidade');
-INSERT INTO atividades_bases VALUES (74040, 'Seleção, agenciamento e locação de mão-de-obra ');
-INSERT INTO atividades_bases VALUES (74050, 'Investigação, vigilância e segurança');
-INSERT INTO atividades_bases VALUES (74060, 'Atividades de imunização, higienização e de limpeza em prédios e em domicílios');
-INSERT INTO atividades_bases VALUES (74090, 'Outros serviços prestados às empresas');
-INSERT INTO atividades_bases VALUES (75011, 'Administração do Estado e da política econômica e social - Federal');
-INSERT INTO atividades_bases VALUES (75012, 'Administração do Estado e da política econômica e social - Estadual');
-INSERT INTO atividades_bases VALUES (75013, 'Administração do Estado e da política econômica e social - Municipal');
-INSERT INTO atividades_bases VALUES (75014, 'Forças Armadas');
-INSERT INTO atividades_bases VALUES (75015, 'Outros serviços coletivos prestados pela administração pública - Federal');
-INSERT INTO atividades_bases VALUES (75016, 'Outros serviços coletivos prestados pela administração pública - Estadual');
-INSERT INTO atividades_bases VALUES (75017, 'Outros serviços coletivos prestados pela administração pública - Municipal');
-INSERT INTO atividades_bases VALUES (75020, 'Seguridade social');
-INSERT INTO atividades_bases VALUES (75999, 'Administração pública, esfera de governo não especificada');
-INSERT INTO atividades_bases VALUES (80011, 'Educação regular, supletiva e especial pública');
-INSERT INTO atividades_bases VALUES (80012, 'Educação regular, supletiva e especial particular');
-INSERT INTO atividades_bases VALUES (80090, 'Outras atividades de ensino');
-INSERT INTO atividades_bases VALUES (80999, 'Atividades de ensino não especificadas');
-INSERT INTO atividades_bases VALUES (85011, 'Saúde pública');
-INSERT INTO atividades_bases VALUES (85012, 'Saúde  particular');
-INSERT INTO atividades_bases VALUES (85013, 'Outras atividades de saúde');
-INSERT INTO atividades_bases VALUES (85020, 'Serviços veterinários');
-INSERT INTO atividades_bases VALUES (85030, 'Serviços sociais');
-INSERT INTO atividades_bases VALUES (85999, 'Atividades de saúde não especificadas');
-INSERT INTO atividades_bases VALUES (90000, '"Limpeza urbana e esgoto');
-INSERT INTO atividades_bases VALUES (91010, 'Atividades de organizações sindicais');
-INSERT INTO atividades_bases VALUES (91020, 'Atividades de organizações empresariais, patronais e profissionais');
-INSERT INTO atividades_bases VALUES (91091, 'Atividades de organizações religiosas e filosóficas');
-INSERT INTO atividades_bases VALUES (91092, 'Outras atividades associativas');
-INSERT INTO atividades_bases VALUES (92011, 'Produção de filmes cinematográficos e fitas de vídeo');
-INSERT INTO atividades_bases VALUES (92012, 'Distribuição e projeção de filmes e de vídeos');
-INSERT INTO atividades_bases VALUES (92013, 'Atividades de rádio');
-INSERT INTO atividades_bases VALUES (92014, 'Atividades de televisão');
-INSERT INTO atividades_bases VALUES (92015, 'Outras atividades artísticas e de espetáculos');
-INSERT INTO atividades_bases VALUES (92020, 'Atividades de agências de notícias');
-INSERT INTO atividades_bases VALUES (92030, 'Bibliotecas, arquivos, museus e outras atividades culturais');
-INSERT INTO atividades_bases VALUES (92040, 'Atividades desportivas e outras relacionadas ao lazer');
-INSERT INTO atividades_bases VALUES (93010, 'Lavanderias e tinturarias');
-INSERT INTO atividades_bases VALUES (93020, 'Cabeleireiros e outros tratamentos de beleza');
-INSERT INTO atividades_bases VALUES (93030, 'Atividades funerárias ');
-INSERT INTO atividades_bases VALUES (93091, 'Atividades de manutenção do físico corporal');
-INSERT INTO atividades_bases VALUES (93092, 'Outras atividades de serviços pessoais');
-INSERT INTO atividades_bases VALUES (95000, 'Serviços domésticos ');
-INSERT INTO atividades_bases VALUES (99000, 'Organismos internacionais e outras instituições extraterritoriais');
-INSERT INTO atividades_bases VALUES (0, 'Atividades mal especificadas');
 
 
 --
--- TOC entry 2129 (class 0 OID 16547)
+-- TOC entry 2139 (class 0 OID 16606)
+-- Dependencies: 187
+-- Data for Name: municipios; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 2140 (class 0 OID 16626)
+-- Dependencies: 188
+-- Data for Name: regioes_geograficas; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 2137 (class 0 OID 16578)
 -- Dependencies: 185
--- Data for Name: municipios_codigos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO municipios_codigos VALUES (5200050, 5200000, 'ABADIA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5200100, 5200000, 'ABADIÂNIA');
-INSERT INTO municipios_codigos VALUES (5200134, 5200000, 'ACREÚNA');
-INSERT INTO municipios_codigos VALUES (5200159, 5200000, 'ADELÂNDIA');
-INSERT INTO municipios_codigos VALUES (5200175, 5200000, 'ÁGUA FRIA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5200209, 5200000, 'ÁGUA LIMPA');
-INSERT INTO municipios_codigos VALUES (5200258, 5200000, 'ÁGUAS LINDAS DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5200308, 5200000, 'ALEXÂNIA');
-INSERT INTO municipios_codigos VALUES (5200506, 5200000, 'ALOÂNDIA');
-INSERT INTO municipios_codigos VALUES (5200555, 5200000, 'ALTO HORIZONTE');
-INSERT INTO municipios_codigos VALUES (5200605, 5200000, 'ALTO PARAÍSO DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5200803, 5200000, 'ALVORADA DO NORTE');
-INSERT INTO municipios_codigos VALUES (5200829, 5200000, 'AMARALINA');
-INSERT INTO municipios_codigos VALUES (5200852, 5200000, 'AMERICANO DO BRASIL');
-INSERT INTO municipios_codigos VALUES (5200902, 5200000, 'AMORINÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5201108, 5200000, 'ANÁPOLIS');
-INSERT INTO municipios_codigos VALUES (5201207, 5200000, 'ANHANGUERA');
-INSERT INTO municipios_codigos VALUES (5201306, 5200000, 'ANICUNS');
-INSERT INTO municipios_codigos VALUES (5201405, 5200000, 'APARECIDA DE GOIÂNIA');
-INSERT INTO municipios_codigos VALUES (5201454, 5200000, 'APARECIDA DO RIO DOCE');
-INSERT INTO municipios_codigos VALUES (5201504, 5200000, 'APORÉ');
-INSERT INTO municipios_codigos VALUES (5201603, 5200000, 'ARAÇU');
-INSERT INTO municipios_codigos VALUES (5201702, 5200000, 'ARAGARÇAS');
-INSERT INTO municipios_codigos VALUES (5201801, 5200000, 'ARAGOIÂNIA');
-INSERT INTO municipios_codigos VALUES (5202155, 5200000, 'ARAGUAPAZ');
-INSERT INTO municipios_codigos VALUES (5202353, 5200000, 'ARENÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5202502, 5200000, 'ARUANÃ');
-INSERT INTO municipios_codigos VALUES (5202601, 5200000, 'AURILÂNDIA');
-INSERT INTO municipios_codigos VALUES (5202809, 5200000, 'AVELINÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5203104, 5200000, 'BALIZA');
-INSERT INTO municipios_codigos VALUES (5203203, 5200000, 'BARRO ALTO');
-INSERT INTO municipios_codigos VALUES (5203302, 5200000, 'BELA VISTA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5203401, 5200000, 'BOM JARDIM DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5203500, 5200000, 'BOM JESUS DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5203559, 5200000, 'BONFINÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5203575, 5200000, 'BONÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5203609, 5200000, 'BRAZABRANTES');
-INSERT INTO municipios_codigos VALUES (5203807, 5200000, 'BRITÂNIA');
-INSERT INTO municipios_codigos VALUES (5203906, 5200000, 'BURITI ALEGRE');
-INSERT INTO municipios_codigos VALUES (5203939, 5200000, 'BURITI DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5203962, 5200000, 'BURITINÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5204003, 5200000, 'CABECEIRAS');
-INSERT INTO municipios_codigos VALUES (5204102, 5200000, 'CACHOEIRA ALTA');
-INSERT INTO municipios_codigos VALUES (5204201, 5200000, 'CACHOEIRA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5204250, 5200000, 'CACHOEIRA DOURADA');
-INSERT INTO municipios_codigos VALUES (5204300, 5200000, 'CAÇU');
-INSERT INTO municipios_codigos VALUES (5204409, 5200000, 'CAIAPÔNIA');
-INSERT INTO municipios_codigos VALUES (5204508, 5200000, 'CALDAS NOVAS');
-INSERT INTO municipios_codigos VALUES (5204557, 5200000, 'CALDAZINHA');
-INSERT INTO municipios_codigos VALUES (5204607, 5200000, 'CAMPESTRE DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5204656, 5200000, 'CAMPINAÇU');
-INSERT INTO municipios_codigos VALUES (5204706, 5200000, 'CAMPINORTE');
-INSERT INTO municipios_codigos VALUES (5204805, 5200000, 'CAMPO ALEGRE DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5204854, 5200000, 'CAMPO LIMPO DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5204904, 5200000, 'CAMPOS BELOS');
-INSERT INTO municipios_codigos VALUES (5204953, 5200000, 'CAMPOS VERDES');
-INSERT INTO municipios_codigos VALUES (5205000, 5200000, 'CARMO DO RIO VERDE');
-INSERT INTO municipios_codigos VALUES (5205059, 5200000, 'CASTELÂNDIA');
-INSERT INTO municipios_codigos VALUES (5205109, 5200000, 'CATALÃO');
-INSERT INTO municipios_codigos VALUES (5205208, 5200000, 'CATURAÍ');
-INSERT INTO municipios_codigos VALUES (5205307, 5200000, 'CAVALCANTE');
-INSERT INTO municipios_codigos VALUES (5205406, 5200000, 'CERES');
-INSERT INTO municipios_codigos VALUES (5205455, 5200000, 'CEZARINA');
-INSERT INTO municipios_codigos VALUES (5205471, 5200000, 'CHAPADÃO DO CÉU');
-INSERT INTO municipios_codigos VALUES (5205497, 5200000, 'CIDADE OCIDENTAL');
-INSERT INTO municipios_codigos VALUES (5205513, 5200000, 'COCALZINHO DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5205521, 5200000, 'COLINAS DO SUL');
-INSERT INTO municipios_codigos VALUES (5205703, 5200000, 'CÓRREGO DO OURO');
-INSERT INTO municipios_codigos VALUES (5205802, 5200000, 'CORUMBÁ DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5205901, 5200000, 'CORUMBAÍBA');
-INSERT INTO municipios_codigos VALUES (5206206, 5200000, 'CRISTALINA');
-INSERT INTO municipios_codigos VALUES (5206305, 5200000, 'CRISTIANÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5206404, 5200000, 'CRIXÁS');
-INSERT INTO municipios_codigos VALUES (5206503, 5200000, 'CROMÍNIA');
-INSERT INTO municipios_codigos VALUES (5206602, 5200000, 'CUMARI');
-INSERT INTO municipios_codigos VALUES (5206701, 5200000, 'DAMIANÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5206800, 5200000, 'DAMOLÂNDIA');
-INSERT INTO municipios_codigos VALUES (5206909, 5200000, 'DAVINÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5207105, 5200000, 'DIORAMA');
-INSERT INTO municipios_codigos VALUES (5208301, 5200000, 'DIVINÓPOLIS DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5207253, 5200000, 'DOVERLÂNDIA');
-INSERT INTO municipios_codigos VALUES (5207352, 5200000, 'EDEALINA');
-INSERT INTO municipios_codigos VALUES (5207402, 5200000, 'EDÉIA');
-INSERT INTO municipios_codigos VALUES (5207501, 5200000, 'ESTRELA DO NORTE');
-INSERT INTO municipios_codigos VALUES (5207535, 5200000, 'FAINA');
-INSERT INTO municipios_codigos VALUES (5207600, 5200000, 'FAZENDA NOVA');
-INSERT INTO municipios_codigos VALUES (5207808, 5200000, 'FIRMINÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5207907, 5200000, 'FLORES DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5208004, 5200000, 'FORMOSA');
-INSERT INTO municipios_codigos VALUES (5208103, 5200000, 'FORMOSO');
-INSERT INTO municipios_codigos VALUES (5208152, 5200000, 'GAMELEIRA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5208400, 5200000, 'GOIANÁPOLIS');
-INSERT INTO municipios_codigos VALUES (5208509, 5200000, 'GOIANDIRA');
-INSERT INTO municipios_codigos VALUES (5208608, 5200000, 'GOIANÉSIA');
-INSERT INTO municipios_codigos VALUES (5208707, 5200000, 'GOIÂNIA');
-INSERT INTO municipios_codigos VALUES (5208806, 5200000, 'GOIANIRA');
-INSERT INTO municipios_codigos VALUES (5208905, 5200000, 'GOIÁS');
-INSERT INTO municipios_codigos VALUES (5209101, 5200000, 'GOIATUBA');
-INSERT INTO municipios_codigos VALUES (5209150, 5200000, 'GOUVELÂNDIA');
-INSERT INTO municipios_codigos VALUES (5209200, 5200000, 'GUAPÓ');
-INSERT INTO municipios_codigos VALUES (5209291, 5200000, 'GUARAÍTA');
-INSERT INTO municipios_codigos VALUES (5209408, 5200000, 'GUARANI DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5209457, 5200000, 'GUARINOS');
-INSERT INTO municipios_codigos VALUES (5209606, 5200000, 'HEITORAÍ');
-INSERT INTO municipios_codigos VALUES (5209705, 5200000, 'HIDROLÂNDIA');
-INSERT INTO municipios_codigos VALUES (5209804, 5200000, 'HIDROLINA');
-INSERT INTO municipios_codigos VALUES (5209903, 5200000, 'IACIARA');
-INSERT INTO municipios_codigos VALUES (5209937, 5200000, 'INACIOLÂNDIA');
-INSERT INTO municipios_codigos VALUES (5209952, 5200000, 'INDIARA');
-INSERT INTO municipios_codigos VALUES (5210000, 5200000, 'INHUMAS');
-INSERT INTO municipios_codigos VALUES (5210109, 5200000, 'IPAMERI');
-INSERT INTO municipios_codigos VALUES (5210158, 5200000, 'IPIRANGA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5210208, 5200000, 'IPORÁ');
-INSERT INTO municipios_codigos VALUES (5210307, 5200000, 'ISRAELÂNDIA');
-INSERT INTO municipios_codigos VALUES (5210406, 5200000, 'ITABERAÍ');
-INSERT INTO municipios_codigos VALUES (5210562, 5200000, 'ITAGUARI');
-INSERT INTO municipios_codigos VALUES (5210604, 5200000, 'ITAGUARU');
-INSERT INTO municipios_codigos VALUES (5210802, 5200000, 'ITAJÁ');
-INSERT INTO municipios_codigos VALUES (5210901, 5200000, 'ITAPACI');
-INSERT INTO municipios_codigos VALUES (5211008, 5200000, 'ITAPIRAPUÃ');
-INSERT INTO municipios_codigos VALUES (5211206, 5200000, 'ITAPURANGA');
-INSERT INTO municipios_codigos VALUES (5211305, 5200000, 'ITARUMÃ');
-INSERT INTO municipios_codigos VALUES (5211404, 5200000, 'ITAUÇU');
-INSERT INTO municipios_codigos VALUES (5211503, 5200000, 'ITUMBIARA');
-INSERT INTO municipios_codigos VALUES (5211602, 5200000, 'IVOLÂNDIA');
-INSERT INTO municipios_codigos VALUES (5211701, 5200000, 'JANDAIA');
-INSERT INTO municipios_codigos VALUES (5211800, 5200000, 'JARAGUÁ');
-INSERT INTO municipios_codigos VALUES (5211909, 5200000, 'JATAÍ');
-INSERT INTO municipios_codigos VALUES (5212006, 5200000, 'JAUPACI');
-INSERT INTO municipios_codigos VALUES (5212055, 5200000, 'JESÚPOLIS');
-INSERT INTO municipios_codigos VALUES (5212105, 5200000, 'JOVIÂNIA');
-INSERT INTO municipios_codigos VALUES (5212204, 5200000, 'JUSSARA');
-INSERT INTO municipios_codigos VALUES (5212253, 5200000, 'LAGOA SANTA');
-INSERT INTO municipios_codigos VALUES (5212303, 5200000, 'LEOPOLDO DE BULHÕES');
-INSERT INTO municipios_codigos VALUES (5212501, 5200000, 'LUZIÂNIA');
-INSERT INTO municipios_codigos VALUES (5212600, 5200000, 'MAIRIPOTABA');
-INSERT INTO municipios_codigos VALUES (5212709, 5200000, 'MAMBAÍ');
-INSERT INTO municipios_codigos VALUES (5212808, 5200000, 'MARA ROSA');
-INSERT INTO municipios_codigos VALUES (5212907, 5200000, 'MARZAGÃO');
-INSERT INTO municipios_codigos VALUES (5212956, 5200000, 'MATRINCHÃ');
-INSERT INTO municipios_codigos VALUES (5213004, 5200000, 'MAURILÂNDIA');
-INSERT INTO municipios_codigos VALUES (5213053, 5200000, 'MIMOSO DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5213087, 5200000, 'MINAÇU');
-INSERT INTO municipios_codigos VALUES (5213103, 5200000, 'MINEIROS');
-INSERT INTO municipios_codigos VALUES (5213400, 5200000, 'MOIPORÁ');
-INSERT INTO municipios_codigos VALUES (5213509, 5200000, 'MONTE ALEGRE DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5213707, 5200000, 'MONTES CLAROS DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5213756, 5200000, 'MONTIVIDIU');
-INSERT INTO municipios_codigos VALUES (5213772, 5200000, 'MONTIVIDIU DO NORTE');
-INSERT INTO municipios_codigos VALUES (5213806, 5200000, 'MORRINHOS');
-INSERT INTO municipios_codigos VALUES (5213855, 5200000, 'MORRO AGUDO DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5213905, 5200000, 'MOSSÂMEDES');
-INSERT INTO municipios_codigos VALUES (5214002, 5200000, 'MOZARLÂNDIA');
-INSERT INTO municipios_codigos VALUES (5214051, 5200000, 'MUNDO NOVO');
-INSERT INTO municipios_codigos VALUES (5214101, 5200000, 'MUTUNÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5214408, 5200000, 'NAZÁRIO');
-INSERT INTO municipios_codigos VALUES (5214507, 5200000, 'NERÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5214606, 5200000, 'NIQUELÂNDIA');
-INSERT INTO municipios_codigos VALUES (5214705, 5200000, 'NOVA AMÉRICA');
-INSERT INTO municipios_codigos VALUES (5214804, 5200000, 'NOVA AURORA');
-INSERT INTO municipios_codigos VALUES (5214838, 5200000, 'NOVA CRIXÁS');
-INSERT INTO municipios_codigos VALUES (5214861, 5200000, 'NOVA GLÓRIA');
-INSERT INTO municipios_codigos VALUES (5214879, 5200000, 'NOVA IGUAÇU DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5214903, 5200000, 'NOVA ROMA');
-INSERT INTO municipios_codigos VALUES (5215009, 5200000, 'NOVA VENEZA');
-INSERT INTO municipios_codigos VALUES (5215207, 5200000, 'NOVO BRASIL');
-INSERT INTO municipios_codigos VALUES (5215231, 5200000, 'NOVO GAMA');
-INSERT INTO municipios_codigos VALUES (5215256, 5200000, 'NOVO PLANALTO');
-INSERT INTO municipios_codigos VALUES (5215306, 5200000, 'ORIZONA');
-INSERT INTO municipios_codigos VALUES (5215405, 5200000, 'OURO VERDE DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5215504, 5200000, 'OUVIDOR');
-INSERT INTO municipios_codigos VALUES (5215603, 5200000, 'PADRE BERNARDO');
-INSERT INTO municipios_codigos VALUES (5215652, 5200000, 'PALESTINA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5215702, 5200000, 'PALMEIRAS DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5215801, 5200000, 'PALMELO');
-INSERT INTO municipios_codigos VALUES (5215900, 5200000, 'PALMINÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5216007, 5200000, 'PANAMÁ');
-INSERT INTO municipios_codigos VALUES (5216304, 5200000, 'PARANAIGUARA');
-INSERT INTO municipios_codigos VALUES (5216403, 5200000, 'PARAÚNA');
-INSERT INTO municipios_codigos VALUES (5216452, 5200000, 'PEROLÂNDIA');
-INSERT INTO municipios_codigos VALUES (5216809, 5200000, 'PETROLINA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5216908, 5200000, 'PILAR DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5217104, 5200000, 'PIRACANJUBA');
-INSERT INTO municipios_codigos VALUES (5217203, 5200000, 'PIRANHAS');
-INSERT INTO municipios_codigos VALUES (5217302, 5200000, 'PIRENÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5217401, 5200000, 'PIRES DO RIO');
-INSERT INTO municipios_codigos VALUES (5217609, 5200000, 'PLANALTINA');
-INSERT INTO municipios_codigos VALUES (5217708, 5200000, 'PONTALINA');
-INSERT INTO municipios_codigos VALUES (5218003, 5200000, 'PORANGATU');
-INSERT INTO municipios_codigos VALUES (5218052, 5200000, 'PORTEIRÃO');
-INSERT INTO municipios_codigos VALUES (5218102, 5200000, 'PORTELÂNDIA');
-INSERT INTO municipios_codigos VALUES (5218300, 5200000, 'POSSE');
-INSERT INTO municipios_codigos VALUES (5218391, 5200000, 'PROFESSOR JAMIL');
-INSERT INTO municipios_codigos VALUES (5218508, 5200000, 'QUIRINÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5218607, 5200000, 'RIALMA');
-INSERT INTO municipios_codigos VALUES (5218706, 5200000, 'RIANÁPOLIS');
-INSERT INTO municipios_codigos VALUES (5218789, 5200000, 'RIO QUENTE');
-INSERT INTO municipios_codigos VALUES (5218805, 5200000, 'RIO VERDE');
-INSERT INTO municipios_codigos VALUES (5218904, 5200000, 'RUBIATABA');
-INSERT INTO municipios_codigos VALUES (5219001, 5200000, 'SANCLERLÂNDIA');
-INSERT INTO municipios_codigos VALUES (5219100, 5200000, 'SANTA BÁRBARA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5219209, 5200000, 'SANTA CRUZ DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5219258, 5200000, 'SANTA FÉ DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5219308, 5200000, 'SANTA HELENA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5219357, 5200000, 'SANTA ISABEL');
-INSERT INTO municipios_codigos VALUES (5219407, 5200000, 'SANTA RITA DO ARAGUAIA');
-INSERT INTO municipios_codigos VALUES (5219456, 5200000, 'SANTA RITA DO NOVO DESTINO');
-INSERT INTO municipios_codigos VALUES (5219506, 5200000, 'SANTA ROSA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5219605, 5200000, 'SANTA TEREZA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5219704, 5200000, 'SANTA TEREZINHA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5219712, 5200000, 'SANTO ANTÔNIO DA BARRA');
-INSERT INTO municipios_codigos VALUES (5219738, 5200000, 'SANTO ANTÔNIO DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5219753, 5200000, 'SANTO ANTÔNIO DO DESCOBERTO');
-INSERT INTO municipios_codigos VALUES (5219803, 5200000, 'SÃO DOMINGOS');
-INSERT INTO municipios_codigos VALUES (5219902, 5200000, 'SÃO FRANCISCO DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5220009, 5200000, 'SÃO JOÃO D''ALIANÇA');
-INSERT INTO municipios_codigos VALUES (5220058, 5200000, 'SÃO JOÃO DA PARAÚNA');
-INSERT INTO municipios_codigos VALUES (5220108, 5200000, 'SÃO LUIS DE MONTES BELOS');
-INSERT INTO municipios_codigos VALUES (5220157, 5200000, 'SÃO LUIZ DO NORTE');
-INSERT INTO municipios_codigos VALUES (5220207, 5200000, 'SÃO MIGUEL DO ARAGUAIA');
-INSERT INTO municipios_codigos VALUES (5220264, 5200000, 'SÃO MIGUEL DO PASSA QUATRO');
-INSERT INTO municipios_codigos VALUES (5220280, 5200000, 'SÃO PATRÍCIO');
-INSERT INTO municipios_codigos VALUES (5220405, 5200000, 'SÃO SIMÃO');
-INSERT INTO municipios_codigos VALUES (5220454, 5200000, 'SENADOR CANEDO');
-INSERT INTO municipios_codigos VALUES (5220504, 5200000, 'SERRANÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5220603, 5200000, 'SILVÂNIA');
-INSERT INTO municipios_codigos VALUES (5220686, 5200000, 'SIMOLÂNDIA');
-INSERT INTO municipios_codigos VALUES (5220702, 5200000, 'SÍTIO D''ABADIA');
-INSERT INTO municipios_codigos VALUES (5221007, 5200000, 'TAQUARAL DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5221080, 5200000, 'TERESINA DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5221197, 5200000, 'TEREZÓPOLIS DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5221304, 5200000, 'TRÊS RANCHOS');
-INSERT INTO municipios_codigos VALUES (5221403, 5200000, 'TRINDADE');
-INSERT INTO municipios_codigos VALUES (5221452, 5200000, 'TROMBAS');
-INSERT INTO municipios_codigos VALUES (5221502, 5200000, 'TURVÂNIA');
-INSERT INTO municipios_codigos VALUES (5221551, 5200000, 'TURVELÂNDIA');
-INSERT INTO municipios_codigos VALUES (5221577, 5200000, 'UIRAPURU');
-INSERT INTO municipios_codigos VALUES (5221601, 5200000, 'URUAÇU');
-INSERT INTO municipios_codigos VALUES (5221700, 5200000, 'URUANA');
-INSERT INTO municipios_codigos VALUES (5221809, 5200000, 'URUTAÍ');
-INSERT INTO municipios_codigos VALUES (5221858, 5200000, 'VALPARAÍSO DE GOIÁS');
-INSERT INTO municipios_codigos VALUES (5221908, 5200000, 'VARJÃO');
-INSERT INTO municipios_codigos VALUES (5222005, 5200000, 'VIANÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5222054, 5200000, 'VICENTINÓPOLIS');
-INSERT INTO municipios_codigos VALUES (5222203, 5200000, 'VILA BOA');
-INSERT INTO municipios_codigos VALUES (5222302, 5200000, 'VILA PROPÍCIO');
-INSERT INTO municipios_codigos VALUES (5299999, 5200000, 'GO, NÃO SABE MUNICÍPIO');
-
-
---
--- TOC entry 2130 (class 0 OID 16578)
--- Dependencies: 186
 -- Data for Name: unidades_federativas; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO unidades_federativas VALUES (11, 'Rondônia');
-INSERT INTO unidades_federativas VALUES (12, 'Acre');
-INSERT INTO unidades_federativas VALUES (13, 'Amazonas');
-INSERT INTO unidades_federativas VALUES (14, 'Roraima');
-INSERT INTO unidades_federativas VALUES (15, 'Pará');
-INSERT INTO unidades_federativas VALUES (16, 'Amapá');
-INSERT INTO unidades_federativas VALUES (17, 'Tocantins');
-INSERT INTO unidades_federativas VALUES (21, 'Maranhão');
-INSERT INTO unidades_federativas VALUES (22, 'Piauí');
-INSERT INTO unidades_federativas VALUES (23, 'Ceará');
-INSERT INTO unidades_federativas VALUES (24, 'Rio Grande do Norte');
-INSERT INTO unidades_federativas VALUES (25, 'Paraíba');
-INSERT INTO unidades_federativas VALUES (26, 'Pernambuco');
-INSERT INTO unidades_federativas VALUES (27, 'Alagoas');
-INSERT INTO unidades_federativas VALUES (28, 'Sergipe');
-INSERT INTO unidades_federativas VALUES (29, 'Bahia');
-INSERT INTO unidades_federativas VALUES (31, 'Minas Gerais');
-INSERT INTO unidades_federativas VALUES (32, 'Espírito Santo');
-INSERT INTO unidades_federativas VALUES (33, 'Rio de Janeiro');
-INSERT INTO unidades_federativas VALUES (35, 'São Paulo');
-INSERT INTO unidades_federativas VALUES (41, 'Paraná');
-INSERT INTO unidades_federativas VALUES (42, 'Santa Catarina');
-INSERT INTO unidades_federativas VALUES (43, 'Rio Grande do Sul');
-INSERT INTO unidades_federativas VALUES (50, 'Mato Grosso do Sul');
-INSERT INTO unidades_federativas VALUES (51, 'Mato Grosso');
-INSERT INTO unidades_federativas VALUES (52, 'Goiás');
-INSERT INTO unidades_federativas VALUES (53, 'Distrito Federal');
 
 
 --
--- TOC entry 2011 (class 2606 OID 16597)
+-- TOC entry 2015 (class 2606 OID 16597)
 -- Name: atividades_bases atividades_bases_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -609,15 +133,24 @@ ALTER TABLE ONLY atividades_bases
 
 
 --
--- TOC entry 2009 (class 2606 OID 16592)
--- Name: municipios_codigos municipios_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 2017 (class 2606 OID 16616)
+-- Name: municipios municipios_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY municipios_codigos
-    ADD CONSTRAINT municipios_pk PRIMARY KEY (regiao);
+ALTER TABLE ONLY municipios
+    ADD CONSTRAINT municipios_pkey PRIMARY KEY (codigo);
 
 
--- Completed on 2017-09-08 13:12:30
+--
+-- TOC entry 2019 (class 2606 OID 16633)
+-- Name: regioes_geograficas regioes_geograficas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY regioes_geograficas
+    ADD CONSTRAINT regioes_geograficas_pkey PRIMARY KEY (codigo);
+
+
+-- Completed on 2017-09-08 16:08:07
 
 --
 -- PostgreSQL database dump complete
