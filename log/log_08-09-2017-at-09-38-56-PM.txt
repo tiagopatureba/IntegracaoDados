@@ -1,0 +1,18 @@
+09:38:56= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+09:38:56= + 0s   = Inserindo data/adequacoes_moradias.csv
+09:38:56= + 0s   = adequacoes_moradias.csv
+09:38:56= + 0s   = Inseridos: 4
+09:38:56= + 0s   = Inserindo data/atividades_bases.csv
+09:38:56= + 0s   = atividades_bases.csv
+09:38:56= + 0s   = Inseridos: 223
+09:38:56= + 0s   = Inserindo data/atividades_cnae_bases.csv
+09:38:56= + 0s   = atividades_cnae_bases.csv
+09:38:56= + 0s   = Inseridos: 242
+09:38:56= + 0s   = Inserindo data/atividades_cnae_gerais.csv
+09:38:56= + 0s   = atividades_cnae_gerais.csv
+09:38:56= + 0s   = Inseridos: 23
+09:38:56= + 0s   = Inserindo data/atividades_cnae_principais.csv
+09:38:56= + 0s   = atividades_cnae_principais.csv
+09:38:56= + 0s   = org.postgresql.util.PSQLException: ERROR: column "codigo" is of type "char" but expression is of type integer
+  Dica: You will need to rewrite or cast the expression.
+  Posição: 70

@@ -1,0 +1,55 @@
+10:20:09= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+10:20:09= + 0s   = Inserindo data/adequacoes_moradias.csv
+10:20:09= + 0s   = adequacoes_moradias.csv
+10:20:09= + 0s   = Inseridos: 4
+10:20:09= + 0s   = Inserindo data/atividades_bases.csv
+10:20:09= + 0s   = atividades_bases.csv
+10:20:09= + 0s   = Inseridos: 223
+10:20:09= + 0s   = Inserindo data/atividades_cnae_bases.csv
+10:20:09= + 0s   = atividades_cnae_bases.csv
+10:20:09= + 0s   = Inseridos: 242
+10:20:09= + 0s   = Inserindo data/atividades_cnae_gerais.csv
+10:20:09= + 0s   = atividades_cnae_gerais.csv
+10:20:09= + 0s   = Inseridos: 23
+10:20:09= + 0s   = Inserindo data/atividades_cnae_principais.csv
+10:20:09= + 0s   = atividades_cnae_principais.csv
+10:20:09= + 0s   = Inseridos: 88
+10:20:09= + 0s   = Inserindo data/atividades_gerais.csv
+10:20:09= + 0s   = atividades_gerais.csv
+10:20:09= + 0s   = Inseridos: 18
+10:20:09= + 0s   = Inserindo data/atividades_principais.csv
+10:20:09= + 0s   = atividades_principais.csv
+10:20:09= + 0s   = Inseridos: 60
+10:20:09= + 0s   = Inserindo data/automoveis.csv
+10:20:09= + 0s   = automoveis.csv
+10:20:09= + 0s   = Inseridos: 3
+10:20:09= + 0s   = Inserindo data/canalizacoes_abastecimentos_aguas.csv
+10:20:09= + 0s   = canalizacoes_abastecimentos_aguas.csv
+10:20:09= + 0s   = Inseridos: 4
+10:20:09= + 0s   = Inserindo data/celulares.csv
+10:20:09= + 0s   = celulares.csv
+10:20:09= + 0s   = Inseridos: 3
+10:20:09= + 0s   = Inserindo data/condicoes_ocupacoes.csv
+10:20:09= + 0s   = condicoes_ocupacoes.csv
+10:20:09= + 0s   = Inseridos: 7
+10:20:09= + 0s   = Inserindo data/cores_racas.csv
+10:20:09= + 0s   = cores_racas.csv
+10:20:09= + 0s   = Inseridos: 7
+10:20:09= + 0s   = Inserindo data/cursos_superiores_bases.csv
+10:20:09= + 0s   = cursos_superiores_bases.csv
+10:20:09= + 0s   = Inseridos: 91
+10:20:09= + 0s   = Inserindo data/cursos_superiores_gerais.csv
+10:20:09= + 0s   = cursos_superiores_gerais.csv
+10:20:09= + 0s   = Inseridos: 10
+10:20:09= + 0s   = Inserindo data/cursos_superiores_principais.csv
+10:20:09= + 0s   = cursos_superiores_principais.csv
+10:20:09= + 0s   = Inseridos: 23
+10:20:09= + 0s   = Inserindo data/municipios.csv
+10:20:09= + 0s   = municipios.csv
+10:20:10= + 1s   = Inseridos: 5566
+10:20:10= + 0s   = Inserindo data/regioes_geograficas.csv
+10:20:10= + 0s   = regioes_geograficas.csv
+10:20:10= + 0s   = Inseridos: 6
+10:20:10= + 0s   = Inserindo data/unidades_federativas.csv
+10:20:10= + 0s   = unidades_federativas.csv
+10:20:10= + 0s   = Inseridos: 28

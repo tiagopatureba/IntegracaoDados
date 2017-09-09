@@ -1,0 +1,10 @@
+07:56:35= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+07:56:36= + 1s   = Inserindo data/unidades_federativas.csv
+07:56:36= + 0s   = unidades_federativas.csv
+07:56:36= + 0s   = Inseridos: 28
+07:56:36= + 0s   = Inserindo data/municipios.csv
+07:56:36= + 0s   = municipios.csv
+07:56:36= + 0s   = Inseridos: 5566
+07:56:36= + 0s   = Inserindo data/atividades_bases.csv
+07:56:36= + 0s   = atividades_bases.csv
+07:56:37= + 1s   = Inseridos: 223

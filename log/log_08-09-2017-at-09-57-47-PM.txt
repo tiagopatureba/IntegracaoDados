@@ -1,0 +1,34 @@
+09:57:47= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+09:57:47= + 0s   = Inserindo data/adequacoes_moradias.csv
+09:57:47= + 0s   = adequacoes_moradias.csv
+09:57:47= + 0s   = Inseridos: 4
+09:57:47= + 0s   = Inserindo data/atividades_bases.csv
+09:57:47= + 0s   = atividades_bases.csv
+09:57:48= + 1s   = Inseridos: 223
+09:57:48= + 0s   = Inserindo data/atividades_cnae_bases.csv
+09:57:48= + 0s   = atividades_cnae_bases.csv
+09:57:48= + 0s   = Inseridos: 242
+09:57:48= + 0s   = Inserindo data/atividades_cnae_gerais.csv
+09:57:48= + 0s   = atividades_cnae_gerais.csv
+09:57:48= + 0s   = Inseridos: 23
+09:57:48= + 0s   = Inserindo data/atividades_cnae_principais.csv
+09:57:48= + 0s   = atividades_cnae_principais.csv
+09:57:48= + 0s   = Inseridos: 88
+09:57:48= + 0s   = Inserindo data/atividades_gerais.csv
+09:57:48= + 0s   = atividades_gerais.csv
+09:57:48= + 0s   = Inseridos: 18
+09:57:48= + 0s   = Inserindo data/atividades_principais.csv
+09:57:48= + 0s   = atividades_principais.csv
+09:57:48= + 0s   = Inseridos: 60
+09:57:48= + 0s   = Inserindo data/automoveis.csv
+09:57:48= + 0s   = automoveis.csv
+09:57:48= + 0s   = Inseridos: 3
+09:57:48= + 0s   = Inserindo data/municipios.csv
+09:57:48= + 0s   = municipios.csv
+09:57:49= + 1s   = Inseridos: 5566
+09:57:49= + 0s   = Inserindo data/regioes_geograficas.csv
+09:57:49= + 0s   = regioes_geograficas.csv
+09:57:49= + 0s   = Inseridos: 6
+09:57:49= + 0s   = Inserindo data/unidades_federativas.csv
+09:57:49= + 0s   = unidades_federativas.csv
+09:57:49= + 0s   = Inseridos: 28

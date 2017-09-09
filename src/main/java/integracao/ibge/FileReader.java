@@ -45,11 +45,49 @@ public class FileReader {
         try {
             String[] atributos = linha.split(";");
             switch (sqlName) {
-                case "insertUnidadesFederativas":
+
+                // Inteiro e String
+                case "insertAdequacoesMoradias":
                 case "insertAtividadesBases":
+                case "insertAtividadesCnaeBases":
+                case "insertAtividadesCnaePrincipais":
+                case "insertAtividadesPrincipais":
+                case "insertAutomoveis":
+                case "insertCanalizacoesAbastecimentosAguas":
+                case "insertCelulares":
+                case "insertCondicoesOcupacoes":
+                case "insertCoresRacas":
+                case "insertCursosSuperioresBases":
+                case "insertCursosSuperioresGerais":
+                case "insertCursosSuperioresPrincipais":
+                case "insertDestinosLixos":
+                case "insertDificuldadesPermanentesEnxergarOuvirCaminharSubirDegrau":
+                case "insertDoutoradosBases":
+                case "insertDoutoradosGerais":
+                case "insertDoutoradosPrincipais":
+                case "insertEntrevistados":
+                case "insertEsgotamentosSanitarios":
+                case "insertEspecies":
+                case "insertEspeciesUnidadesVisitadas":
+                case "insertExistenciasEnergiasEletricas":
+                case "insertFalecimentosEntreDatas":
+                case "insertFormasAbastecimentosAguas":
+                case "insertFormasDeclararIdades":
+                case "insertGeladeiras":
+                case "insertMaquinasLavarRoupa":
+                case "insertMarcasImputacoes":
+                case "insertMedidoresRelogiosEnergia":
                 case "insertMunicipios":
                 case "insertRegioesGeograficas":
+                case "insertUnidadesFederativas":
                     preparedStatement.setInt(1, Integer.valueOf(atributos[0]));
+                    preparedStatement.setString(2, atributos[1]);
+                    break;
+
+                //String e String
+                case "insertAtividadesCnaeGerais":
+                case "insertAtividadesGerais":
+                    preparedStatement.setString(1, atributos[0]);
                     preparedStatement.setString(2, atributos[1]);
                     break;
 
@@ -63,7 +101,6 @@ public class FileReader {
         } catch (SQLException ex) {
             Log.error(ex);
         }
-
     }
 
     public void limpaDados(String tableName) {

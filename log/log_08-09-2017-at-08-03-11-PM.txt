@@ -1,0 +1,4 @@
+08:03:11= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+08:03:11= + 0s   = Inserindo data/regioes_geograficas.csv
+08:03:11= + 0s   = regioes_geograficas.csv
+08:03:11= + 0s   = Inseridos: 6

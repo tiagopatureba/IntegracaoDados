@@ -1,0 +1,14 @@
+08:24:30= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+08:24:30= + 0s   = Inserindo data/unidades_federativas.csv
+08:24:30= + 0s   = unidades_federativas.csv
+08:24:30= + 0s   = Inseridos: 28
+08:24:30= + 0s   = Inserindo data/municipios.csv
+08:24:30= + 0s   = municipios.csv
+08:24:31= + 1s   = Inseridos: 5566
+08:24:31= + 0s   = Inserindo data/atividades_bases.csv
+08:24:31= + 0s   = atividades_bases.csv
+08:24:31= + 0s   = Inseridos: 223
+08:24:31= + 0s   = Inserindo data/atividades_gerais.csv
+08:24:31= + 0s   = atividades_gerais.csv
+08:24:31= + 0s   = org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "atividades_gerais_pkey"
+  Detalhe: Key (codigo)=(A) already exists.

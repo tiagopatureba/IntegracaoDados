@@ -1,0 +1,14 @@
+08:22:46= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+08:22:46= + 0s   = Inserindo data/unidades_federativas.csv
+08:22:46= + 0s   = unidades_federativas.csv
+08:22:46= + 0s   = Inseridos: 28
+08:22:46= + 0s   = Inserindo data/municipios.csv
+08:22:46= + 0s   = municipios.csv
+08:22:47= + 1s   = Inseridos: 5566
+08:22:47= + 0s   = Inserindo data/atividades_bases.csv
+08:22:47= + 0s   = atividades_bases.csv
+08:22:47= + 0s   = Inseridos: 223
+08:22:47= + 0s   = Inserindo data/atividades_gerais.csv
+08:22:47= + 0s   = atividades_gerais.csv
+08:22:47= + 0s   = org.postgresql.util.PSQLException: ERROR: column "codigo" of relation "atividades_gerais" does not exist
+  Posição: 38

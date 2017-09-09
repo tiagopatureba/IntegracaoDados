@@ -1,0 +1,37 @@
+09:59:12= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+09:59:12= + 0s   = Inserindo data/adequacoes_moradias.csv
+09:59:12= + 0s   = adequacoes_moradias.csv
+09:59:12= + 0s   = Inseridos: 4
+09:59:12= + 0s   = Inserindo data/atividades_bases.csv
+09:59:12= + 0s   = atividades_bases.csv
+09:59:12= + 0s   = Inseridos: 223
+09:59:12= + 0s   = Inserindo data/atividades_cnae_bases.csv
+09:59:12= + 0s   = atividades_cnae_bases.csv
+09:59:12= + 0s   = Inseridos: 242
+09:59:12= + 0s   = Inserindo data/atividades_cnae_gerais.csv
+09:59:12= + 0s   = atividades_cnae_gerais.csv
+09:59:12= + 0s   = Inseridos: 23
+09:59:12= + 0s   = Inserindo data/atividades_cnae_principais.csv
+09:59:12= + 0s   = atividades_cnae_principais.csv
+09:59:12= + 0s   = Inseridos: 88
+09:59:12= + 0s   = Inserindo data/atividades_gerais.csv
+09:59:12= + 0s   = atividades_gerais.csv
+09:59:12= + 0s   = Inseridos: 18
+09:59:12= + 0s   = Inserindo data/atividades_principais.csv
+09:59:12= + 0s   = atividades_principais.csv
+09:59:12= + 0s   = Inseridos: 60
+09:59:12= + 0s   = Inserindo data/automoveis.csv
+09:59:12= + 0s   = automoveis.csv
+09:59:12= + 0s   = Inseridos: 3
+09:59:12= + 0s   = Inserindo data/canalizacoes_abastecimentos_aguas.csv
+09:59:12= + 0s   = canalizacoes_abastecimentos_aguas.csv
+09:59:12= + 0s   = Inseridos: 4
+09:59:12= + 0s   = Inserindo data/municipios.csv
+09:59:12= + 0s   = municipios.csv
+09:59:13= + 1s   = Inseridos: 5566
+09:59:13= + 0s   = Inserindo data/regioes_geograficas.csv
+09:59:13= + 0s   = regioes_geograficas.csv
+09:59:13= + 0s   = Inseridos: 6
+09:59:13= + 0s   = Inserindo data/unidades_federativas.csv
+09:59:13= + 0s   = unidades_federativas.csv
+09:59:13= + 0s   = Inseridos: 28

@@ -1,0 +1,21 @@
+09:46:56= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+09:46:56= + 0s   = Inserindo data/adequacoes_moradias.csv
+09:46:56= + 0s   = adequacoes_moradias.csv
+09:46:56= + 0s   = Inseridos: 4
+09:46:56= + 0s   = Inserindo data/atividades_bases.csv
+09:46:56= + 0s   = atividades_bases.csv
+09:46:56= + 0s   = Inseridos: 223
+09:46:56= + 0s   = Inserindo data/atividades_cnae_bases.csv
+09:46:56= + 0s   = atividades_cnae_bases.csv
+09:46:56= + 0s   = Inseridos: 242
+09:46:56= + 0s   = Inserindo data/atividades_cnae_gerais.csv
+09:46:56= + 0s   = atividades_cnae_gerais.csv
+09:46:56= + 0s   = Inseridos: 23
+09:46:56= + 0s   = Inserindo data/atividades_cnae_principais.csv
+09:46:56= + 0s   = atividades_cnae_principais.csv
+09:46:56= + 0s   = Inseridos: 88
+09:46:56= + 0s   = Inserindo data/atividades_gerais.csv
+09:46:56= + 0s   = atividades_gerais.csv
+09:46:56= + 0s   = Inseridos: 18
+09:46:56= + 0s   = Inserindo data/atividades_principais.csv
+09:46:56= + 0s   = atividades_principais.csv
