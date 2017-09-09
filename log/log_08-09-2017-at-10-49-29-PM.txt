@@ -1,0 +1,1 @@
+10:49:29= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
