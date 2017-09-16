@@ -1,0 +1,122 @@
+02:56:07= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+02:56:07= + 0s   = Inserindo data/adequacoes_moradias.csv
+02:56:07= + 0s   = adequacoes_moradias.csv
+02:56:07= + 0s   = Inseridos: 4
+02:56:07= + 0s   = Inserindo data/atividades_bases.csv
+02:56:07= + 0s   = atividades_bases.csv
+02:56:07= + 0s   = Inseridos: 223
+02:56:07= + 0s   = Inserindo data/atividades_cnae_bases.csv
+02:56:07= + 0s   = atividades_cnae_bases.csv
+02:56:08= + 1s   = Inseridos: 242
+02:56:08= + 0s   = Inserindo data/atividades_cnae_gerais.csv
+02:56:08= + 0s   = atividades_cnae_gerais.csv
+02:56:08= + 0s   = Inseridos: 23
+02:56:08= + 0s   = Inserindo data/atividades_cnae_principais.csv
+02:56:08= + 0s   = atividades_cnae_principais.csv
+02:56:08= + 0s   = Inseridos: 88
+02:56:08= + 0s   = Inserindo data/atividades_gerais.csv
+02:56:08= + 0s   = atividades_gerais.csv
+02:56:08= + 0s   = Inseridos: 18
+02:56:08= + 0s   = Inserindo data/atividades_principais.csv
+02:56:08= + 0s   = atividades_principais.csv
+02:56:08= + 0s   = Inseridos: 60
+02:56:08= + 0s   = Inserindo data/automoveis.csv
+02:56:08= + 0s   = automoveis.csv
+02:56:08= + 0s   = Inseridos: 3
+02:56:08= + 0s   = Inserindo data/canalizacoes_abastecimentos_aguas.csv
+02:56:08= + 0s   = canalizacoes_abastecimentos_aguas.csv
+02:56:08= + 0s   = Inseridos: 4
+02:56:08= + 0s   = Inserindo data/celulares.csv
+02:56:08= + 0s   = celulares.csv
+02:56:08= + 0s   = Inseridos: 3
+02:56:08= + 0s   = Inserindo data/condicoes_ocupacoes.csv
+02:56:08= + 0s   = condicoes_ocupacoes.csv
+02:56:08= + 0s   = Inseridos: 7
+02:56:08= + 0s   = Inserindo data/cores_racas.csv
+02:56:08= + 0s   = cores_racas.csv
+02:56:08= + 0s   = Inseridos: 7
+02:56:08= + 0s   = Inserindo data/cursos_superiores_bases.csv
+02:56:08= + 0s   = cursos_superiores_bases.csv
+02:56:08= + 0s   = Inseridos: 91
+02:56:08= + 0s   = Inserindo data/cursos_superiores_gerais.csv
+02:56:08= + 0s   = cursos_superiores_gerais.csv
+02:56:08= + 0s   = Inseridos: 10
+02:56:08= + 0s   = Inserindo data/cursos_superiores_principais.csv
+02:56:08= + 0s   = cursos_superiores_principais.csv
+02:56:08= + 0s   = Inseridos: 23
+02:56:08= + 0s   = Inserindo data/destinos_lixos.csv
+02:56:08= + 0s   = destinos_lixos.csv
+02:56:08= + 0s   = Inseridos: 8
+02:56:08= + 0s   = Inserindo data/dificuldades_permanentes_enxegar_ouvir_caminhar_subir_degrau.csv
+02:56:08= + 0s   = dificuldades_permanentes_enxegar_ouvir_caminhar_subir_degrau.csv
+02:56:08= + 0s   = Inseridos: 6
+02:56:08= + 0s   = Inserindo data/doutorados_bases.csv
+02:56:08= + 0s   = doutorados_bases.csv
+02:56:08= + 0s   = Inseridos: 77
+02:56:08= + 0s   = Inserindo data/doutorados_gerais.csv
+02:56:08= + 0s   = doutorados_gerais.csv
+02:56:08= + 0s   = Inseridos: 10
+02:56:08= + 0s   = Inserindo data/doutorados_principais.csv
+02:56:08= + 0s   = doutorados_principais.csv
+02:56:08= + 0s   = Inseridos: 24
+02:56:08= + 0s   = Inserindo data/entrevistados.csv
+02:56:08= + 0s   = entrevistados.csv
+02:56:08= + 0s   = Inseridos: 21
+02:56:08= + 0s   = Inserindo data/esgotamentos_sanitarios.csv
+02:56:08= + 0s   = esgotamentos_sanitarios.csv
+02:56:08= + 0s   = Inseridos: 7
+02:56:08= + 0s   = Inserindo data/especies.csv
+02:56:08= + 0s   = especies.csv
+02:56:08= + 0s   = Inseridos: 14
+02:56:08= + 0s   = Inserindo data/especies_unidades_visitadas.csv
+02:56:08= + 0s   = especies_unidades_visitadas.csv
+02:56:08= + 0s   = Inseridos: 5
+02:56:08= + 0s   = Inserindo data/existencias_energias_eletricas.csv
+02:56:08= + 0s   = existencias_energias_eletricas.csv
+02:56:08= + 0s   = Inseridos: 4
+02:56:08= + 0s   = Inserindo data/falecimentos_entre_datas.csv
+02:56:08= + 0s   = falecimentos_entre_datas.csv
+02:56:08= + 0s   = Inseridos: 3
+02:56:08= + 0s   = Inserindo data/formas_abastecimentos_aguas.csv
+02:56:08= + 0s   = formas_abastecimentos_aguas.csv
+02:56:08= + 0s   = Inseridos: 11
+02:56:08= + 0s   = Inserindo data/formas_declarar_idades.csv
+02:56:08= + 0s   = formas_declarar_idades.csv
+02:56:08= + 0s   = Inseridos: 3
+02:56:08= + 0s   = Inserindo data/geladeiras.csv
+02:56:08= + 0s   = geladeiras.csv
+02:56:08= + 0s   = Inseridos: 3
+02:56:08= + 0s   = Inserindo data/maquinas_lavar_roupa.csv
+02:56:08= + 0s   = maquinas_lavar_roupa.csv
+02:56:08= + 0s   = Inseridos: 3
+02:56:08= + 0s   = Inserindo data/marcas_imputacoes.csv
+02:56:08= + 0s   = marcas_imputacoes.csv
+02:56:08= + 0s   = Inseridos: 3
+02:56:08= + 0s   = Inserindo data/medidores_relogios_energia.csv
+02:56:08= + 0s   = medidores_relogios_energia.csv
+02:56:08= + 0s   = Inseridos: 4
+02:56:08= + 0s   = Inserindo data/mesorregioes.csv
+02:56:08= + 0s   = mesorregioes.csv
+02:56:08= + 0s   = Inseridos: 138
+02:56:08= + 0s   = Inserindo data/mestrados_bases.csv
+02:56:08= + 0s   = mestrados_bases.csv
+02:56:08= + 0s   = Inseridos: 80
+02:56:08= + 0s   = Inserindo data/mestrados_gerais.csv
+02:56:08= + 0s   = mestrados_gerais.csv
+02:56:08= + 0s   = Inseridos: 10
+02:56:08= + 0s   = Inserindo data/mestrados_principais.csv
+02:56:08= + 0s   = mestrados_principais.csv
+02:56:08= + 0s   = Inseridos: 24
+02:56:08= + 0s   = Inserindo data/microcomputadores.csv
+02:56:08= + 0s   = microcomputadores.csv
+02:56:08= + 0s   = Inseridos: 3
+02:56:08= + 0s   = Inserindo data/microcomputadores_acesso_internet.csv
+02:56:08= + 0s   = microcomputadores_acesso_internet.csv
+02:56:08= + 0s   = Inseridos: 3
+02:56:08= + 0s   = Inserindo data/microrregioes.csv
+02:56:08= + 0s   = microrregioes.csv
+02:56:08= + 0s   = Inseridos: 559
+02:56:08= + 0s   = Inserindo data/migracoes_deslocamentos_paises_estrangeiros.csv
+02:56:08= + 0s   = migracoes_deslocamentos_paises_estrangeiros.csv
+02:56:09= + 1s   = org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "migracoes_deslocamentos_paises_estrangeiros_pkey"
+  Detalhe: Key (codigo)=(8000826) already exists.

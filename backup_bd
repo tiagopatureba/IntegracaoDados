@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.2
 -- Dumped by pg_dump version 9.6.2
 
--- Started on 2017-09-09 01:02:11
+-- Started on 2017-09-16 18:47:35
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -25,7 +25,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2290 (class 0 OID 0)
+-- TOC entry 2572 (class 0 OID 0)
 -- Dependencies: 1
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
@@ -326,6 +326,253 @@ CREATE TABLE esgotamentos_sanitarios (
 ALTER TABLE esgotamentos_sanitarios OWNER TO postgres;
 
 --
+-- TOC entry 210 (class 1259 OID 16968)
+-- Name: especies; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE especies (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE especies OWNER TO postgres;
+
+--
+-- TOC entry 211 (class 1259 OID 16976)
+-- Name: especies_unidades_visitadas; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE especies_unidades_visitadas (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE especies_unidades_visitadas OWNER TO postgres;
+
+--
+-- TOC entry 212 (class 1259 OID 16984)
+-- Name: existencias_energias_eletricas; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE existencias_energias_eletricas (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE existencias_energias_eletricas OWNER TO postgres;
+
+--
+-- TOC entry 213 (class 1259 OID 16992)
+-- Name: falecimentos_entre_datas; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE falecimentos_entre_datas (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE falecimentos_entre_datas OWNER TO postgres;
+
+--
+-- TOC entry 214 (class 1259 OID 17000)
+-- Name: formas_abastecimentos_aguas; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE formas_abastecimentos_aguas (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE formas_abastecimentos_aguas OWNER TO postgres;
+
+--
+-- TOC entry 215 (class 1259 OID 17008)
+-- Name: formas_declarar_idades; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE formas_declarar_idades (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE formas_declarar_idades OWNER TO postgres;
+
+--
+-- TOC entry 216 (class 1259 OID 17016)
+-- Name: geladeiras; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE geladeiras (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE geladeiras OWNER TO postgres;
+
+--
+-- TOC entry 217 (class 1259 OID 17024)
+-- Name: maquinas_lavar_roupa; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE maquinas_lavar_roupa (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE maquinas_lavar_roupa OWNER TO postgres;
+
+--
+-- TOC entry 218 (class 1259 OID 17032)
+-- Name: marcas_imputacoes; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE marcas_imputacoes (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE marcas_imputacoes OWNER TO postgres;
+
+--
+-- TOC entry 219 (class 1259 OID 17040)
+-- Name: medidores_relogios_energia; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE medidores_relogios_energia (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE medidores_relogios_energia OWNER TO postgres;
+
+--
+-- TOC entry 220 (class 1259 OID 17093)
+-- Name: mesorregioes; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE mesorregioes (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE mesorregioes OWNER TO postgres;
+
+--
+-- TOC entry 221 (class 1259 OID 17105)
+-- Name: mestrados_bases; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE mestrados_bases (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE mestrados_bases OWNER TO postgres;
+
+--
+-- TOC entry 222 (class 1259 OID 17113)
+-- Name: mestrados_gerais; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE mestrados_gerais (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE mestrados_gerais OWNER TO postgres;
+
+--
+-- TOC entry 223 (class 1259 OID 17122)
+-- Name: mestrados_principais; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE mestrados_principais (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE mestrados_principais OWNER TO postgres;
+
+--
+-- TOC entry 224 (class 1259 OID 17138)
+-- Name: microcomputadores; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE microcomputadores (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE microcomputadores OWNER TO postgres;
+
+--
+-- TOC entry 225 (class 1259 OID 17146)
+-- Name: microcomputadores_acesso_internet; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE microcomputadores_acesso_internet (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE microcomputadores_acesso_internet OWNER TO postgres;
+
+--
+-- TOC entry 226 (class 1259 OID 17154)
+-- Name: microrregioes; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE microrregioes (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE microrregioes OWNER TO postgres;
+
+--
+-- TOC entry 234 (class 1259 OID 17282)
+-- Name: migracoes_deslocamentos_paises_estrangeiros; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE migracoes_deslocamentos_paises_estrangeiros (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE migracoes_deslocamentos_paises_estrangeiros OWNER TO postgres;
+
+--
+-- TOC entry 227 (class 1259 OID 17170)
+-- Name: motocicletas; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE motocicletas (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE motocicletas OWNER TO postgres;
+
+--
 -- TOC entry 187 (class 1259 OID 16606)
 -- Name: municipios; Type: TABLE; Schema: public; Owner: postgres
 --
@@ -337,6 +584,149 @@ CREATE TABLE municipios (
 
 
 ALTER TABLE municipios OWNER TO postgres;
+
+--
+-- TOC entry 228 (class 1259 OID 17191)
+-- Name: ocupacoes_bases; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE ocupacoes_bases (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE ocupacoes_bases OWNER TO postgres;
+
+--
+-- TOC entry 229 (class 1259 OID 17199)
+-- Name: ocupacoes_gerais; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE ocupacoes_gerais (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE ocupacoes_gerais OWNER TO postgres;
+
+--
+-- TOC entry 230 (class 1259 OID 17207)
+-- Name: ocupacoes_principais; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE ocupacoes_principais (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE ocupacoes_principais OWNER TO postgres;
+
+--
+-- TOC entry 231 (class 1259 OID 17215)
+-- Name: ocupacoes_subgrupos; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE ocupacoes_subgrupos (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE ocupacoes_subgrupos OWNER TO postgres;
+
+--
+-- TOC entry 232 (class 1259 OID 17223)
+-- Name: paredes_externas; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE paredes_externas (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE paredes_externas OWNER TO postgres;
+
+--
+-- TOC entry 233 (class 1259 OID 17231)
+-- Name: pessoas_moravam_outros_paises; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE pessoas_moravam_outros_paises (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE pessoas_moravam_outros_paises OWNER TO postgres;
+
+--
+-- TOC entry 235 (class 1259 OID 17360)
+-- Name: ponderacoes; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE ponderacoes (
+    codigo character varying(1023) NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE ponderacoes OWNER TO postgres;
+
+--
+-- TOC entry 236 (class 1259 OID 17374)
+-- Name: quantidades_banheiros; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE quantidades_banheiros (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE quantidades_banheiros OWNER TO postgres;
+
+--
+-- TOC entry 237 (class 1259 OID 17382)
+-- Name: quantidades_comodos; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE quantidades_comodos (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE quantidades_comodos OWNER TO postgres;
+
+--
+-- TOC entry 238 (class 1259 OID 17390)
+-- Name: quantidades_dormitorios; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE quantidades_dormitorios (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE quantidades_dormitorios OWNER TO postgres;
+
+--
+-- TOC entry 239 (class 1259 OID 17404)
+-- Name: radios; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE radios (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE radios OWNER TO postgres;
 
 --
 -- TOC entry 188 (class 1259 OID 16626)
@@ -352,20 +742,150 @@ CREATE TABLE regioes_geograficas (
 ALTER TABLE regioes_geograficas OWNER TO postgres;
 
 --
+-- TOC entry 240 (class 1259 OID 17418)
+-- Name: registros_nascimentos; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE registros_nascimentos (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE registros_nascimentos OWNER TO postgres;
+
+--
+-- TOC entry 241 (class 1259 OID 17432)
+-- Name: religioes; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE religioes (
+    codigo integer DEFAULT 0 NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE religioes OWNER TO postgres;
+
+--
+-- TOC entry 242 (class 1259 OID 17440)
+-- Name: responsaveis_domicilios; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE responsaveis_domicilios (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE responsaveis_domicilios OWNER TO postgres;
+
+--
+-- TOC entry 243 (class 1259 OID 17448)
+-- Name: sanitarios_buracos_dejecoes; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE sanitarios_buracos_dejecoes (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE sanitarios_buracos_dejecoes OWNER TO postgres;
+
+--
+-- TOC entry 244 (class 1259 OID 17456)
+-- Name: sexos; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE sexos (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE sexos OWNER TO postgres;
+
+--
+-- TOC entry 245 (class 1259 OID 17464)
+-- Name: situacoes_domicilios; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE situacoes_domicilios (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE situacoes_domicilios OWNER TO postgres;
+
+--
+-- TOC entry 246 (class 1259 OID 17472)
+-- Name: situacoes_setores; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE situacoes_setores (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE situacoes_setores OWNER TO postgres;
+
+--
+-- TOC entry 247 (class 1259 OID 17480)
+-- Name: telefones_fixos; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE telefones_fixos (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE telefones_fixos OWNER TO postgres;
+
+--
+-- TOC entry 248 (class 1259 OID 17488)
+-- Name: televisoes; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE televisoes (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE televisoes OWNER TO postgres;
+
+--
+-- TOC entry 249 (class 1259 OID 17515)
+-- Name: unidades_domesticas; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE unidades_domesticas (
+    codigo integer NOT NULL,
+    descricao character varying(1023) NOT NULL
+);
+
+
+ALTER TABLE unidades_domesticas OWNER TO postgres;
+
+--
 -- TOC entry 185 (class 1259 OID 16578)
 -- Name: unidades_federativas; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE unidades_federativas (
     codigo integer NOT NULL,
-    nome character varying(80) NOT NULL
+    descricao character varying(1023) NOT NULL
 );
 
 
 ALTER TABLE unidades_federativas OWNER TO postgres;
 
 --
--- TOC entry 2128 (class 2606 OID 16663)
+-- TOC entry 2330 (class 2606 OID 16663)
 -- Name: adequacoes_moradias adequacoes_moradias_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -374,7 +894,7 @@ ALTER TABLE ONLY adequacoes_moradias
 
 
 --
--- TOC entry 2120 (class 2606 OID 16597)
+-- TOC entry 2322 (class 2606 OID 16597)
 -- Name: atividades_bases atividades_bases_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -383,7 +903,7 @@ ALTER TABLE ONLY atividades_bases
 
 
 --
--- TOC entry 2130 (class 2606 OID 16724)
+-- TOC entry 2332 (class 2606 OID 16724)
 -- Name: atividades_cnae_bases atividades_cnae_bases_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -392,7 +912,7 @@ ALTER TABLE ONLY atividades_cnae_bases
 
 
 --
--- TOC entry 2132 (class 2606 OID 16705)
+-- TOC entry 2334 (class 2606 OID 16705)
 -- Name: atividades_cnae_gerais atividades_cnae_gerais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -401,7 +921,7 @@ ALTER TABLE ONLY atividades_cnae_gerais
 
 
 --
--- TOC entry 2134 (class 2606 OID 16733)
+-- TOC entry 2336 (class 2606 OID 16733)
 -- Name: atividades_cnae_principais atividades_cnae_principais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -410,7 +930,7 @@ ALTER TABLE ONLY atividades_cnae_principais
 
 
 --
--- TOC entry 2126 (class 2606 OID 16649)
+-- TOC entry 2328 (class 2606 OID 16649)
 -- Name: atividades_gerais atividades_gerais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -419,7 +939,7 @@ ALTER TABLE ONLY atividades_gerais
 
 
 --
--- TOC entry 2136 (class 2606 OID 16767)
+-- TOC entry 2338 (class 2606 OID 16767)
 -- Name: atividades_principais atividades_principais_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -428,7 +948,7 @@ ALTER TABLE ONLY atividades_principais
 
 
 --
--- TOC entry 2138 (class 2606 OID 16782)
+-- TOC entry 2340 (class 2606 OID 16782)
 -- Name: automoveis automoveis_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -437,7 +957,7 @@ ALTER TABLE ONLY automoveis
 
 
 --
--- TOC entry 2140 (class 2606 OID 16795)
+-- TOC entry 2342 (class 2606 OID 16795)
 -- Name: canalizacoes_abastecimentos_aguas canalizacoes_abastecimentos_aguas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -446,7 +966,7 @@ ALTER TABLE ONLY canalizacoes_abastecimentos_aguas
 
 
 --
--- TOC entry 2142 (class 2606 OID 16811)
+-- TOC entry 2344 (class 2606 OID 16811)
 -- Name: celulares celulares_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -455,7 +975,7 @@ ALTER TABLE ONLY celulares
 
 
 --
--- TOC entry 2144 (class 2606 OID 16823)
+-- TOC entry 2346 (class 2606 OID 16823)
 -- Name: condicoes_ocupacoes condicoes_ocupacoes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -464,7 +984,7 @@ ALTER TABLE ONLY condicoes_ocupacoes
 
 
 --
--- TOC entry 2146 (class 2606 OID 16835)
+-- TOC entry 2348 (class 2606 OID 16835)
 -- Name: cores_racas cores_racas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -473,7 +993,7 @@ ALTER TABLE ONLY cores_racas
 
 
 --
--- TOC entry 2148 (class 2606 OID 16847)
+-- TOC entry 2350 (class 2606 OID 16847)
 -- Name: cursos_superiores_bases cursos_superiores_bases_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -482,7 +1002,7 @@ ALTER TABLE ONLY cursos_superiores_bases
 
 
 --
--- TOC entry 2150 (class 2606 OID 16859)
+-- TOC entry 2352 (class 2606 OID 16859)
 -- Name: cursos_superiores_gerais cursos_superiores_gerais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -491,7 +1011,7 @@ ALTER TABLE ONLY cursos_superiores_gerais
 
 
 --
--- TOC entry 2152 (class 2606 OID 16871)
+-- TOC entry 2354 (class 2606 OID 16871)
 -- Name: cursos_superiores_principais cursos_superiores_principais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -500,7 +1020,7 @@ ALTER TABLE ONLY cursos_superiores_principais
 
 
 --
--- TOC entry 2154 (class 2606 OID 16883)
+-- TOC entry 2356 (class 2606 OID 16883)
 -- Name: destinos_lixos destinos_lixos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -509,7 +1029,7 @@ ALTER TABLE ONLY destinos_lixos
 
 
 --
--- TOC entry 2156 (class 2606 OID 16898)
+-- TOC entry 2358 (class 2606 OID 16898)
 -- Name: dificuldades_permanentes_enxegar_ouvir_caminhar_subir_degrau dificuldades_permanentes_enxegar_ouvir_caminhar_subir_degrau_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -518,7 +1038,7 @@ ALTER TABLE ONLY dificuldades_permanentes_enxegar_ouvir_caminhar_subir_degrau
 
 
 --
--- TOC entry 2158 (class 2606 OID 16910)
+-- TOC entry 2360 (class 2606 OID 16910)
 -- Name: doutorados_bases doutorados_bases_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -527,7 +1047,7 @@ ALTER TABLE ONLY doutorados_bases
 
 
 --
--- TOC entry 2160 (class 2606 OID 16922)
+-- TOC entry 2362 (class 2606 OID 16922)
 -- Name: doutorados_gerais doutorados_gerais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -536,7 +1056,7 @@ ALTER TABLE ONLY doutorados_gerais
 
 
 --
--- TOC entry 2162 (class 2606 OID 16930)
+-- TOC entry 2364 (class 2606 OID 16930)
 -- Name: doutorados_principais doutorados_principais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -545,7 +1065,7 @@ ALTER TABLE ONLY doutorados_principais
 
 
 --
--- TOC entry 2164 (class 2606 OID 16943)
+-- TOC entry 2366 (class 2606 OID 16943)
 -- Name: entrevistados entrevistados_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -554,7 +1074,7 @@ ALTER TABLE ONLY entrevistados
 
 
 --
--- TOC entry 2166 (class 2606 OID 16963)
+-- TOC entry 2368 (class 2606 OID 16963)
 -- Name: esgotamentos_sanitarios esgotamentos_sanitarios_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -563,7 +1083,178 @@ ALTER TABLE ONLY esgotamentos_sanitarios
 
 
 --
--- TOC entry 2122 (class 2606 OID 16742)
+-- TOC entry 2370 (class 2606 OID 16975)
+-- Name: especies especies_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY especies
+    ADD CONSTRAINT especies_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2372 (class 2606 OID 16983)
+-- Name: especies_unidades_visitadas especies_unidades_visitadas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY especies_unidades_visitadas
+    ADD CONSTRAINT especies_unidades_visitadas_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2374 (class 2606 OID 16991)
+-- Name: existencias_energias_eletricas existencias_energias_eletricas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY existencias_energias_eletricas
+    ADD CONSTRAINT existencias_energias_eletricas_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2376 (class 2606 OID 16999)
+-- Name: falecimentos_entre_datas falecimentos_entre_datas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY falecimentos_entre_datas
+    ADD CONSTRAINT falecimentos_entre_datas_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2378 (class 2606 OID 17007)
+-- Name: formas_abastecimentos_aguas formas_abastecimentos_aguas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY formas_abastecimentos_aguas
+    ADD CONSTRAINT formas_abastecimentos_aguas_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2380 (class 2606 OID 17015)
+-- Name: formas_declarar_idades formas_declarar_idades_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY formas_declarar_idades
+    ADD CONSTRAINT formas_declarar_idades_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2382 (class 2606 OID 17023)
+-- Name: geladeiras geladeiras_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY geladeiras
+    ADD CONSTRAINT geladeiras_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2384 (class 2606 OID 17031)
+-- Name: maquinas_lavar_roupa maquinas_lavar_roupa_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY maquinas_lavar_roupa
+    ADD CONSTRAINT maquinas_lavar_roupa_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2386 (class 2606 OID 17039)
+-- Name: marcas_imputacoes marcas_imputacoes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY marcas_imputacoes
+    ADD CONSTRAINT marcas_imputacoes_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2388 (class 2606 OID 17047)
+-- Name: medidores_relogios_energia medidores_relogios_energia_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY medidores_relogios_energia
+    ADD CONSTRAINT medidores_relogios_energia_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2390 (class 2606 OID 17100)
+-- Name: mesorregioes mesorregioes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY mesorregioes
+    ADD CONSTRAINT mesorregioes_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2392 (class 2606 OID 17112)
+-- Name: mestrados_bases mestrados_bases_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY mestrados_bases
+    ADD CONSTRAINT mestrados_bases_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2394 (class 2606 OID 17120)
+-- Name: mestrados_gerais mestrados_gerais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY mestrados_gerais
+    ADD CONSTRAINT mestrados_gerais_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2396 (class 2606 OID 17129)
+-- Name: mestrados_principais mestrados_principais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY mestrados_principais
+    ADD CONSTRAINT mestrados_principais_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2400 (class 2606 OID 17153)
+-- Name: microcomputadores_acesso_internet microcomputadores_acesso_internet_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY microcomputadores_acesso_internet
+    ADD CONSTRAINT microcomputadores_acesso_internet_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2398 (class 2606 OID 17145)
+-- Name: microcomputadores microcomputadores_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY microcomputadores
+    ADD CONSTRAINT microcomputadores_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2402 (class 2606 OID 17161)
+-- Name: microrregioes microrregioes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY microrregioes
+    ADD CONSTRAINT microrregioes_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2418 (class 2606 OID 17289)
+-- Name: migracoes_deslocamentos_paises_estrangeiros migracoes_deslocamentos_paises_estrangeiros_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY migracoes_deslocamentos_paises_estrangeiros
+    ADD CONSTRAINT migracoes_deslocamentos_paises_estrangeiros_pkey PRIMARY KEY (codigo, descricao);
+
+
+--
+-- TOC entry 2404 (class 2606 OID 17177)
+-- Name: motocicletas motocicletas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY motocicletas
+    ADD CONSTRAINT motocicletas_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2324 (class 2606 OID 16742)
 -- Name: municipios municipios_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -572,7 +1263,106 @@ ALTER TABLE ONLY municipios
 
 
 --
--- TOC entry 2124 (class 2606 OID 16752)
+-- TOC entry 2406 (class 2606 OID 17198)
+-- Name: ocupacoes_bases ocupacoes_bases_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY ocupacoes_bases
+    ADD CONSTRAINT ocupacoes_bases_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2408 (class 2606 OID 17206)
+-- Name: ocupacoes_gerais ocupacoes_gerais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY ocupacoes_gerais
+    ADD CONSTRAINT ocupacoes_gerais_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2410 (class 2606 OID 17214)
+-- Name: ocupacoes_principais ocupacoes_principais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY ocupacoes_principais
+    ADD CONSTRAINT ocupacoes_principais_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2412 (class 2606 OID 17222)
+-- Name: ocupacoes_subgrupos ocupacoes_subgrupos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY ocupacoes_subgrupos
+    ADD CONSTRAINT ocupacoes_subgrupos_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2414 (class 2606 OID 17230)
+-- Name: paredes_externas paredes_externas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY paredes_externas
+    ADD CONSTRAINT paredes_externas_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2416 (class 2606 OID 17238)
+-- Name: pessoas_moravam_outros_paises pessoas_moravam_outros_paises_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY pessoas_moravam_outros_paises
+    ADD CONSTRAINT pessoas_moravam_outros_paises_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2420 (class 2606 OID 17367)
+-- Name: ponderacoes ponderacoes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY ponderacoes
+    ADD CONSTRAINT ponderacoes_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2422 (class 2606 OID 17381)
+-- Name: quantidades_banheiros quantidades_banheiros_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY quantidades_banheiros
+    ADD CONSTRAINT quantidades_banheiros_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2424 (class 2606 OID 17389)
+-- Name: quantidades_comodos quantidades_comodos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY quantidades_comodos
+    ADD CONSTRAINT quantidades_comodos_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2426 (class 2606 OID 17397)
+-- Name: quantidades_dormitorios quantidades_dormitorios_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY quantidades_dormitorios
+    ADD CONSTRAINT quantidades_dormitorios_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2428 (class 2606 OID 17411)
+-- Name: radios radios_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY radios
+    ADD CONSTRAINT radios_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2326 (class 2606 OID 16752)
 -- Name: regioes_geograficas regioes_geograficas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -580,7 +1370,97 @@ ALTER TABLE ONLY regioes_geograficas
     ADD CONSTRAINT regioes_geograficas_pkey PRIMARY KEY (codigo);
 
 
--- Completed on 2017-09-09 01:02:13
+--
+-- TOC entry 2430 (class 2606 OID 17425)
+-- Name: registros_nascimentos registros_nascimentos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY registros_nascimentos
+    ADD CONSTRAINT registros_nascimentos_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2432 (class 2606 OID 17439)
+-- Name: religioes religioes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY religioes
+    ADD CONSTRAINT religioes_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2434 (class 2606 OID 17447)
+-- Name: responsaveis_domicilios responsaveis_domicilios_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY responsaveis_domicilios
+    ADD CONSTRAINT responsaveis_domicilios_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2436 (class 2606 OID 17455)
+-- Name: sanitarios_buracos_dejecoes sanitarios_buracos_dejecoes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY sanitarios_buracos_dejecoes
+    ADD CONSTRAINT sanitarios_buracos_dejecoes_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2438 (class 2606 OID 17463)
+-- Name: sexos sexos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY sexos
+    ADD CONSTRAINT sexos_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2440 (class 2606 OID 17471)
+-- Name: situacoes_domicilios situacoes_domicilios_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY situacoes_domicilios
+    ADD CONSTRAINT situacoes_domicilios_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2442 (class 2606 OID 17479)
+-- Name: situacoes_setores situacoes_setores_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY situacoes_setores
+    ADD CONSTRAINT situacoes_setores_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2444 (class 2606 OID 17487)
+-- Name: telefones_fixos telefones_fixos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY telefones_fixos
+    ADD CONSTRAINT telefones_fixos_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2446 (class 2606 OID 17495)
+-- Name: televisoes televisoes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY televisoes
+    ADD CONSTRAINT televisoes_pkey PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 2448 (class 2606 OID 17522)
+-- Name: unidades_domesticas unidades_domesticas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY unidades_domesticas
+    ADD CONSTRAINT unidades_domesticas_pkey PRIMARY KEY (codigo);
+
+
+-- Completed on 2017-09-16 18:47:36
 
 --
 -- PostgreSQL database dump complete

@@ -77,8 +77,37 @@ public class FileReader {
                 case "insertMaquinasLavarRoupa":
                 case "insertMarcasImputacoes":
                 case "insertMedidoresRelogiosEnergia":
+                case "insertMesorregioes":
+                case "insertMestradosBases":
+                case "insertMestradosGerais":
+                case "insertMestradosPrincipais":
+                case "insertMicrocomputadores":
+                case "insertMicrocomputadoresAcessoInternet":
+                case "insertMicrorregioes":
+                case "insertMigracoesDeslocamentosPaisesEstrangeiros":
+                case "insertMotocicletas":
                 case "insertMunicipios":
+                case "insertOcupacoesBases":
+                case "insertOcupacoesGerais":
+                case "insertOcupacoesPrincipais":
+                case "insertOcupacoesSubgrupos":
+                case "insertParedesExternas":
+                case "insertPessoasMoravamOutrosPaises":
+                case "insertQuantidadesBanheiros":
+                case "insertQuantidadesComodos":
+                case "insertQuantidadesDormitorios":
+                case "insertRadios":
                 case "insertRegioesGeograficas":
+                case "insertRegistrosNascimentos":
+                case "insertReligioes":
+                case "insertResponsaveisDomicilios":
+                case "insertSanitariosBuracosDejecoes":
+                case "insertSexos":
+                case "insertSituacoesDomicilios":
+                case "insertSituacoesSetores":
+                case "insertTelefonesFixos":
+                case "insertTelevisoes":
+                case "insertUnidadesDomesticas":
                 case "insertUnidadesFederativas":
                     preparedStatement.setInt(1, Integer.valueOf(atributos[0]));
                     preparedStatement.setString(2, atributos[1]);
@@ -87,15 +116,10 @@ public class FileReader {
                 //String e String
                 case "insertAtividadesCnaeGerais":
                 case "insertAtividadesGerais":
+                case "insertPonderacoes":
                     preparedStatement.setString(1, atributos[0]);
                     preparedStatement.setString(2, atributos[1]);
                     break;
-
-                //case "insertMunicipio":
-                //    preparedStatement.setInt(1, Integer.valueOf(atributos[0]));
-                //    preparedStatement.setInt(2, Integer.valueOf(atributos[1]));
-                //    preparedStatement.setString(3, atributos[2]);
-                //    break;
             }
 
         } catch (SQLException ex) {

@@ -4,9 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
         FileReader file = new FileReader();
-        //
-        //
-        //
         file.limpaDados("adequacoes_moradias");
         file.limpaDados("atividades_bases");
         file.limpaDados("atividades_cnae_bases");
@@ -39,8 +36,38 @@ public class Main {
         file.limpaDados("maquinas_lavar_roupa");
         file.limpaDados("marcas_imputacoes");
         file.limpaDados("medidores_relogios_energia");
+        file.limpaDados("mesorregioes");
+        file.limpaDados("mestrados_bases");
+        file.limpaDados("mestrados_gerais");
+        file.limpaDados("mestrados_principais");
+        file.limpaDados("microcomputadores");
+        file.limpaDados("microcomputadores_acesso_internet");
+        file.limpaDados("microrregioes");
+        file.limpaDados("migracoes_deslocamentos_paises_estrangeiros");
+        file.limpaDados("motocicletas");
         file.limpaDados("municipios");
+        file.limpaDados("ocupacoes_bases");
+        file.limpaDados("ocupacoes_gerais");
+        file.limpaDados("ocupacoes_principais");
+        file.limpaDados("ocupacoes_subgrupos");
+        file.limpaDados("paredes_externas");
+        file.limpaDados("pessoas_moravam_outros_paises");
+        file.limpaDados("ponderacoes");
+        file.limpaDados("quantidades_banheiros");
+        file.limpaDados("quantidades_comodos");
+        file.limpaDados("quantidades_dormitorios");
+        file.limpaDados("radios");
         file.limpaDados("regioes_geograficas");
+        file.limpaDados("registros_nascimentos");
+        file.limpaDados("religioes");
+        file.limpaDados("responsaveis_domicilios");
+        file.limpaDados("sanitarios_buracos_dejecoes");
+        file.limpaDados("sexos");
+        file.limpaDados("situacoes_domicilios");
+        file.limpaDados("situacoes_setores");
+        file.limpaDados("telefones_fixos");
+        file.limpaDados("televisoes");
+        file.limpaDados("unidades_domesticas");
         file.limpaDados("unidades_federativas");
 
         file.insertIntoTableFromFile("data/adequacoes_moradias.csv", "insertAdequacoesMoradias");
@@ -75,9 +102,38 @@ public class Main {
         file.insertIntoTableFromFile("data/maquinas_lavar_roupa.csv", "insertMaquinasLavarRoupa");
         file.insertIntoTableFromFile("data/marcas_imputacoes.csv", "insertMarcasImputacoes");
         file.insertIntoTableFromFile("data/medidores_relogios_energia.csv", "insertMedidoresRelogiosEnergia");
+        file.insertIntoTableFromFile("data/mesorregioes.csv", "insertMesorregioes");
+        file.insertIntoTableFromFile("data/mestrados_bases.csv", "insertMestradosBases");
+        file.insertIntoTableFromFile("data/mestrados_gerais.csv", "insertMestradosGerais");
+        file.insertIntoTableFromFile("data/mestrados_principais.csv", "insertMestradosPrincipais");
+        file.insertIntoTableFromFile("data/microcomputadores.csv", "insertMicrocomputadores");
+        file.insertIntoTableFromFile("data/microcomputadores_acesso_internet.csv", "insertMicrocomputadoresAcessoInternet");
+        file.insertIntoTableFromFile("data/microrregioes.csv", "insertMicrorregioes");
+        file.insertIntoTableFromFile("data/migracoes_deslocamentos_paises_estrangeiros.csv", "insertMigracoesDeslocamentosPaisesEstrangeiros");
+        file.insertIntoTableFromFile("data/motocicletas.csv", "insertMotocicletas");
         file.insertIntoTableFromFile("data/municipios.csv", "insertMunicipios");
+        file.insertIntoTableFromFile("data/ocupacoes_bases.csv", "insertOcupacoesBases");
+        file.insertIntoTableFromFile("data/ocupacoes_gerais.csv", "insertOcupacoesGerais");
+        file.insertIntoTableFromFile("data/ocupacoes_principais.csv", "insertOcupacoesPrincipais");
+        file.insertIntoTableFromFile("data/ocupacoes_subgrupos.csv", "insertOcupacoesSubgrupos");
+        file.insertIntoTableFromFile("data/paredes_externas.csv", "insertParedesExternas");
+        file.insertIntoTableFromFile("data/pessoas_moravam_outros_paises.csv", "insertPessoasMoravamOutrosPaises");
+        file.insertIntoTableFromFile("data/ponderacoes.csv", "insertPonderacoes");
+        file.insertIntoTableFromFile("data/quantidades_banheiros.csv", "insertQuantidadesBanheiros");
+        file.insertIntoTableFromFile("data/quantidades_comodos.csv", "insertQuantidadesComodos");
+        file.insertIntoTableFromFile("data/quantidades_dormitorios.csv", "insertQuantidadesDormitorios");
+        file.insertIntoTableFromFile("data/radios.csv", "insertRadios");
         file.insertIntoTableFromFile("data/regioes_geograficas.csv", "insertRegioesGeograficas");
+        file.insertIntoTableFromFile("data/registros_nascimentos.csv", "insertRegistrosNascimentos");
+        file.insertIntoTableFromFile("data/religioes.csv", "insertReligioes");
+        file.insertIntoTableFromFile("data/responsaveis_domicilios.csv", "insertResponsaveisDomicilios");
+        file.insertIntoTableFromFile("data/sanitarios_buracos_dejecoes.csv", "insertSanitariosBuracosDejecoes");
+        file.insertIntoTableFromFile("data/sexos.csv", "insertSexos");
+        file.insertIntoTableFromFile("data/situacoes_domicilios.csv", "insertSituacoesDomicilios");
+        file.insertIntoTableFromFile("data/situacoes_setores.csv", "insertSituacoesSetores");
+        file.insertIntoTableFromFile("data/telefones_fixos.csv", "insertTelefonesFixos");
+        file.insertIntoTableFromFile("data/televisoes.csv", "insertTelevisoes");
+        file.insertIntoTableFromFile("data/unidades_domesticas.csv", "insertUnidadesDomesticas");
         file.insertIntoTableFromFile("data/unidades_federativas.csv", "insertUnidadesFederativas");
-
     }
 }
