@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 public class FileReader {
 
-    public void insertIntoTableFromFile(String fileName, String sqlName) {
+    public void insertIntoTableFromFileCSV(String fileName, String sqlName) {
         Log.msg("Inserindo " + fileName);
         try {
             ConnectionSGBD conn = new ConnectionSGBD();
@@ -27,7 +27,7 @@ public class FileReader {
             conn.connection("fileReader").setAutoCommit(false);
             while ((linha = in.readLine()) != null) {
                 preparedStatement = conn.connection("fileReader").prepareStatement(Config.getProperty(sqlName));
-                preprocesColumns(sqlName, preparedStatement, linha);
+                preprocessColumns(sqlName, preparedStatement, linha);
                 preparedStatement.execute();
                 q++;
             }
@@ -41,11 +41,37 @@ public class FileReader {
         }
     }
 
-    public void preprocesColumns(String sqlName, PreparedStatement preparedStatement, String linha) {
+    public void insertIntoTableFromFileTXT(String fileName, String sqlName) {
+        Log.msg("Inserindo " + fileName);
+        try {
+            ConnectionSGBD conn = new ConnectionSGBD();
+            PreparedStatement preparedStatement;
+            File arquivoTXT = new File(fileName);
+            Log.msg(arquivoTXT.getName());
+            BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(arquivoTXT), "LATIN1"));
+            String linha;
+            int q = 1;
+            conn.connection("fileReader").setAutoCommit(false);
+            while ((linha = in.readLine()) != null) {
+                preparedStatement = conn.connection("fileReader").prepareStatement(Config.getProperty(sqlName));
+                preprocessColumns(sqlName, preparedStatement, linha);
+                preparedStatement.execute();
+                q++;
+            }
+            conn.connection("fileReader").commit();
+            Log.msg("Inseridos: " + q);
+            in.close();
+        } catch (SQLException | FileNotFoundException ex) {
+            Log.error(ex);
+        } catch (IOException ex) {
+            Log.error(ex);
+        }
+    }
+
+    public void preprocessColumns(String sqlName, PreparedStatement preparedStatement, String linha) {
         try {
             String[] atributos = linha.split(";");
             switch (sqlName) {
-
                 // Inteiro e String
                 case "insertAdequacoesMoradias":
                 case "insertAtividadesBases":
@@ -112,7 +138,6 @@ public class FileReader {
                     preparedStatement.setInt(1, Integer.valueOf(atributos[0]));
                     preparedStatement.setString(2, atributos[1]);
                     break;
-
                 //String e String
                 case "insertAtividadesCnaeGerais":
                 case "insertAtividadesGerais":
@@ -120,8 +145,11 @@ public class FileReader {
                     preparedStatement.setString(1, atributos[0]);
                     preparedStatement.setString(2, atributos[1]);
                     break;
+                //Just String
+                case "insertAmostrasDomicilios":
+                    preparedStatement.setString(1, atributos[0]);
+                    break;
             }
-
         } catch (SQLException ex) {
             Log.error(ex);
         }

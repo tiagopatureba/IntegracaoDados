@@ -1,0 +1,8 @@
+09:06:20= + 0s   = Conectado ao bd jdbc:postgresql://localhost:5432/:integracao_ibge
+09:06:20= + 0s   = Inserindo data/adequacoes_moradias.csv
+09:06:20= + 0s   = adequacoes_moradias.csv
+09:06:20= + 0s   = Inseridos: 4
+09:06:20= + 0s   = Inserindo data/amostras_domicilios.txt
+09:06:20= + 0s   = amostras_domicilios.txt
+09:06:20= + 0s   = org.postgresql.util.PSQLException: ERROR: column "codigo" of relation "amostras_domicilios" does not exist
+  Posição: 40
